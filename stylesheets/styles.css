@@ -1,26 +1,10 @@
+* {
+  box-sizing: border-box; }
+
 body {
 	line-height: 1.5em;
 }
 
-.divider {
-	height: 10px;
-	background: #159957;
-	border-radius: 10px;
-	margin: 0px -40px;	
-}
-
-#specialization {
-	font-weight: normal;
-  color: #159957;
-  text-decoration: none; 
-  margin-bottom: 20px;
-}
-
-#specialization>a {
-	font-weight: normal;
-  color: #159957;
-  text-decoration: none; 
-}
 /* unvisited link */
 a:link {
     color: blue;
@@ -41,13 +25,43 @@ a:active {
     color: blue;
 }
 
-button {
-	
-	       /* border-radius: 5px;*/
+.main-content {
+	margin: 2em 2em;
 }
 
-h4 {
+.divider {
+	height: 5px;
+	background: #159957;
+	border-radius: 10px;
+	margin: 0px;	
+}
 
+
+
+.return {
+	text-align: right;
+	font-size: 12px;
+}
+
+.page-header {
+  color: #fff;
+  text-align: center;
+  background-color: #159957;
+  background-image: linear-gradient(120deg,#155799, #159957); 
+  background-image: linear-gradient(120deg,red, yellow); 
+  }
+
+  #specialization {
+	font-weight: normal;
+  color: #159957;
+  text-decoration: none; 
+  margin-bottom: 20px;
+}
+
+#specialization>a {
+	font-weight: normal;
+  color: #159957;
+  text-decoration: none; 
 }
 
 #course>a {
@@ -56,7 +70,28 @@ h4 {
 	text-decoration: none;
 }
 
+#welcome {
+	text-decoration: none;
+	color: black;
+}
 
+#welcome>a:link {
+		text-decoration: none;
+	color: black;
+}
+
+#welcome>a:hover {
+		text-decoration: none;
+	color: black;
+}
+#welcome>a:active {
+		text-decoration: none;
+	color: black;
+}
+#welcome>a:visited {
+		text-decoration: none;
+	color: black;
+}
 /*********** Desktop *********/
 /*@media (min-width: 992px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
