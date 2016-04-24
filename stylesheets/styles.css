@@ -1,3 +1,7 @@
+body {
+	line-height: 1.5em;
+}
+
 .divider {
 	height: 10px;
 	background: #159957;
@@ -5,7 +9,52 @@
 	margin: 0px -40px;	
 }
 
+#specialization {
+	font-weight: normal;
+  color: #159957;
+  text-decoration: none; 
+  margin-bottom: 20px;
+}
 
+#specialization>a {
+	font-weight: normal;
+  color: #159957;
+  text-decoration: none; 
+}
+/* unvisited link */
+a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: blue;
+}
+
+/* mouse over link */
+a:hover {
+    color: purple;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+button {
+	
+	       /* border-radius: 5px;*/
+}
+
+h4 {
+
+}
+
+#course>a {
+	margin-top: 0px;
+	color: #5c5cd6;
+	text-decoration: none;
+}
 
 
 /*********** Desktop *********/
