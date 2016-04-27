@@ -1,0 +1,196 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="jstut.js"></script>
+ 
+    <style type="text/css">
+      body {font-size: 1.6em;}
+      .hidden {display:none;}
+      .show {display:inline !important;}
+      button {
+        border: 2px solid black; background: #E5E4E2;
+        font-size: .5em; font-weight: bold; color: black;
+        padding: .8em 2em;
+        margin-top: .4em;
+      }
+    </style>
+ 
+  </head>
+  <body>
+    
+    <p id="sayHello"></p>
+
+    <script>
+    //#1 - Very Basics  
+    // var yourName = prompt("What is your name?");
+    // if(yourName != null) {
+    //   document.getElementById('sayHello').innerHTML = "Hello " + yourName;
+    // } else {
+    //   alert("Please enter a name next time")
+    // }
+
+    // #2 - Writing some math
+    // document.write("5 + 4 = ", 5 + 4, "<br>");
+    // document.write("5 - 4 = ", 5 - 4, "<br>");
+    // document.write("5 * 4 = ", 5 * 4, "<br>");
+
+    // #3 - Some more math
+    // var balance = 1563.87;
+    // document.write("Monthly Payment: $", (balance / 12).toFixed(2))
+    // document.write("<br>");
+    // var randNum = 5;
+    // document.write("randNum++ = ", randNum++, "<br />");
+    // document.write("++randNum = ", ++randNum, "<br />");
+
+    // #4 - Math function (must learn a lot more)
+    // document.write(Math.E, "<br>");
+    // document.write(Math.PI, "<br>");
+    // document.write(Math.floor((Math.random()*100)+0), "<br>");
+    // document.write(Math.random(), "<br>");
+
+    // #5
+    // ---------- STRINGS ----------
+    // var randStr = "A long " + "string that " + "goes on and on";
+     
+    // // String length
+    // document.write("String Length : ", randStr.length + "<br/>");
+    
+    // // notice the escape characters for quotes
+    // document.write("Index for \"goes\" : ", randStr.indexOf("goes"), "<br/>");
+     
+    // // Return the value using a start and end index
+    // document.write(randStr.slice(19, 23) + "<br/>");
+     
+    // // Return everything after the start index
+    // document.write(randStr.slice(19) + "<br/>");
+     
+    // // Return the value using the start index and length
+    // document.write(randStr.substr(19, 4) + "<br/>");
+     
+    // // Replace a string
+    // document.write(randStr.replace("and on", "forever") + "<br/>");
+
+
+    // Styling with JS
+    // var strToStyle = "Random String";
+     
+    // document.write("Big : ", strToStyle.big(), "<br />");
+    // document.write("Bold : ", strToStyle.bold(), "<br />");
+    // document.write("Font Color : ", strToStyle.fontcolor("blue"), "<br />");
+    // document.write("Font Size : ", strToStyle.fontsize("8em"), "<br />");
+    // document.write("Italics : ", strToStyle.italics(), "<br />");
+    // document.write("Google : ", strToStyle.link("http://google.com"), "<br />");
+    // document.write("Small : ", strToStyle.small(), "<br />");
+    // document.write("Strike : ", strToStyle.strike(), "<br />");
+    // document.write("Sub : ", strToStyle.sub(), "<br />");
+    // document.write("Sup : ", strToStyle.sup(), "<br />");
+    // document.write("Sup : ", "Colin's superscript".sup(), "<br />");
+
+    // Switch is used to match a limited number of options
+    // var age = 21;
+    // // switch(age) {
+    // //   case 5 :
+    // //   case 6 :
+    // //     document.write("Go to Kindergarten<br />");
+    // //     break;
+     
+    // //   case 7 :
+    // //     document.write("Go to 1st Grade<br />");
+    // //     break;
+     
+    // //   default :
+    // //     document.write("Subtract 5 from your age<br />");
+    // // }
+
+    // //Ternary operator
+    // var canIVote = (age >= 18) ? true : false;
+    // document.write(canIVote);
+
+    //While Loop
+    // var i = 1
+    // while(i <= 10){
+    //   document.write(i + "<br>");
+    //   i++;
+    // }
+
+    //Do-While Loop
+    // do{
+    // var guess = prompt("Guess a number between 1 and 20");
+    // }while(guess != 15)
+ 
+    // alert("You guessed it! 15 was the number");
+
+    // Arrays
+
+    // var array = [1, 2, 3, 5];
+    // document.write(array.length);
+    // array[4] = "Colin's";
+    // array.push("Additional item");
+    // document.write(array);
+
+    //Functions: ~34:00 - 44:00 => Take a look and get some good notes
+
+
+    // Event Handling ~44:00 - 48:00
+
+    // ---------- EVENT HANDLING ----------
+    // function openAlert(mess){
+    //   alert(mess);
+    // }
+     
+     
+    // ---------- DATE ----------
+    // Get a Date object
+    // var curDate = new Date();
+     
+    // document.write("Date : ", curDate.getDate(), "<br />");
+    // document.write("Month : ", curDate.getMonth(), "<br />");
+    // document.write("Day : ", curDate.getDay(), "<br />");
+    // document.write("Year : ", curDate.getFullYear(), "<br />");
+    // document.write("Time : ", curDate.getHours(), ":", curDate.getMinutes(),
+    //   ":", curDate.getSeconds(), ":", curDate.getMilliseconds(), "<br />");
+     
+    // // Create a Date object for my birthday
+    // var myBD = new Date("December 21, 2015");
+     
+    // var msForBD = myBD.getTime();
+    // var timeNow = curDate.getTime();
+    // var tilMyBD = msForBD - timeNow;
+     
+    // document.write("Days til Birthday : ", tilMyBD / (1000 * 60 * 60 * 24), "<br />");
+     
+
+    </script> 
+     
+    <!--  CHANGING ELEMENTS & EVENT HANDLING  -->
+    <!-- All the events can be found here http://www.w3schools.com/jsref/dom_obj_event.asp -->
+     
+    <!-- Open alert on click -->
+    <a href="JavaScript:void(0)" onClick="alert('Hello');">Say Hello</a><br />
+     
+    <!-- Call a function on click -->
+    <a href="JavaScript:void(0)" onClick="openAlert('Hi how are you');">Say Something</a><br />
+     
+    <!-- Change text color on mouse rollover and roll out-->
+    <a href="JavaScript:void(0)" onmouseover="this.style.color='red';"
+    onmouseout="this.style.color='blue';"
+    ondblclick="this.text='You Double Clicked Me'"
+    onmousedown="this.text='Don\'t Press So hard'"
+    onmouseup="this.text='Thank You'">Make me Red</a><br />
+
+    <!-- Line 463 at link is ~51:50 http://www.newthinktank.com/2015/09/learn-javascript-one-video/ -->
+    <!-- How do you get Sublime to list suggestions?  Are they already on the screen? -->
+
+
+    <!-- Element Styling ~1:03:08, Line 567 -->
+
+
+    <!-- Form Validation ~1:28:38 -->
+
+    <!-- Exception Handling ~1:35:04 -->
+
+
+
+
+  </body>
+</html>

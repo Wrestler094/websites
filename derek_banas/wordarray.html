@@ -1,0 +1,36 @@
+<!-- wordarray.html -->
+<!-- The purpose of this page is to receive words from the user
+and then display them in different styles on the page at random.  When a word is entered, the form is cleared and that word is added to an array.  The User can click another button to make it display with a particular style. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word Array</title>
+</head>
+<body>
+	<div>Give me a word, any word: <input id="user_input" type="text"></div>
+	<button id="Submit" onClick="bigWordArray()">Submit</button>
+	<p id="styledWord"></p>
+	
+	<a href="JavaScript:void(0)" onClick="alert('Hello');">Say Hello</a><br>
+
+
+	<script type="text/javascript">
+
+		// var wordarray = Array new();
+
+		function bigWordArray(){
+			var box_entry = document.getElementById('user_input').value;
+			document.getElementById('styledWord').textContent = box_entry;
+
+
+
+		}
+
+
+	</script>
+
+
+
+</body>
+</html>
