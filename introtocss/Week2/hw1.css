@@ -1,11 +1,13 @@
 body {
   padding: 2px;
-  margin: 0 auto;
+  margin: 1px 2px;
 }
 
 header {
+  background-color: #558000;
   background-image: url('images/flywheel.jpg');
   background-repeat: no-repeat;
+  background-size: 100%;
   color: #ffffff;
   display: block;
   height: 125px;
@@ -17,6 +19,7 @@ header {
 h1 {
   text-transform: uppercase;
   font-size: 2em;
+  margin-top: 2px;
 }
 
 a {
@@ -27,6 +30,7 @@ a {
 
 nav {
   text-align: center;
+  padding-left: 50px;
 }
 
 nav>a {
@@ -40,6 +44,7 @@ nav>a {
   margin-left: 10px;
   opacity: 0.5;
   padding: 0.6em;
+  text-align: center;
   text-decoration: none;
   width: 150px;
 }
@@ -47,12 +52,12 @@ nav>a {
 img {
   border: solid;
   border-color: #000;
-  height: 80px;
+  height: 90px;
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
   margin-top: 20px;
-  width: 140px;
+  width: 160px;
   
 }
 
