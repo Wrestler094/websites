@@ -27,11 +27,11 @@ nav a{
 
 }
 .current{
-	background-color:#800000;
+	background-color:#ff0000;
 }
 
 nav a:hover{
-	color:#000000;
-	border-radius: 0;
+	background-color:#dd44ff;
+	border-radius: 10%;
 
 }

@@ -1,0 +1,84 @@
+/*nav3.css*/
+/*http://css-snippets.com/drop-down-navigation */
+body {
+  margin-left: 1em;
+  padding: 0;
+  background: #ccc;
+}
+
+p {
+	display: block;
+	margin: 0 auto;
+	width: 80vw;
+	
+}
+nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+    width: 20%;
+    border-right: 3px solid yellow;
+    height: 50px;
+    line-height: 50px;
+    font-size: 140%;
+    display: inline-block;
+    margin-right: -4px;
+  }
+
+nav li li{
+    border-right: none;
+    width: 100%;
+    border-left: 0px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding-left: 15px;
+  
+}
+
+nav a:hover {
+  background-color: #005f5f;
+  transition: 1.5s background-color;
+}
+
+nav a.active {
+  background-color: #aaa;
+  color: #444;
+  cursor: default;
+}
+
+/* Sub Menus */
+nav li li {
+  font-size: .8em;
+}
+
+nav > ul > li {
+   text-align: center;
+}
+
+nav > ul > li > a {
+    padding-left: 0;
+}
+
+/* Sub Menus */
+nav li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+}
+
+nav li:hover ul {
+   display: block;
+}
+
+nav li ul li {
+   display: block;
+ }
