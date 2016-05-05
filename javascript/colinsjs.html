@@ -1,0 +1,52 @@
+<!-- colinsjs.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Javascript</title>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/colinsjs_styles.css" media="screen">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<h1>Learning Javascript</h1>
+
+	<p>This is a basic one that is entirely in the HTML: <a href="JavaScript:void(0)" onClick="alert('Hello');">Say Hello</a></p>
+
+	<p>Like the one above, this is entirely in HTML but it shows different colors with different actions: <a href="JavaScript:void(0)" onmouseover="this.style.color='red';"
+    onmouseout="this.style.color='blue';"
+    ondblclick="this.text='You Double Clicked Me'"
+    onmousedown="this.text='Don\'t Press So hard'"
+    onmouseup="this.text='Thank You'">Make me Red</a></p>
+	
+	<hr>
+  <p>In case I forget, look at this page for more information on DOM events: <a href="http://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM Events</a></p>
+	
+	<h2>Level 2</h2>
+	<div>The div below has the id "colins-div" and the HTML DOM event</div>
+	<div id="colins-div" onclick="message('By clicking here, you changed it')">Colin's Div</div>
+	
+	<script type="text/javascript">
+
+    function message(msg) {
+    	// This function works by assigning whatever you put in the parentheses to the "colins-div"
+    	// element in the document
+    	document.getElementById('colins-div').innerHTML = msg;
+    }
+	</script>
+
+
+	<div>Dates</div><br>
+	<script type="text/javascript">
+    var d = new Date(2016, 05, 02);
+    document.write("This is Colin's Date: ", "<br>");
+    document.write("Full Year: ", d.getFullYear(), "<br>");
+    document.write("Month: ", d.getMonth(), "<br>");
+
+	</script>
+</body>
+</html>

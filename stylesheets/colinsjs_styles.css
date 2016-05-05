@@ -1,0 +1,16 @@
+/*colinsjs_styles.css*/
+body {
+	margin: 0em;
+	padding: 0.5em;
+	
+}
+
+#colins-div {
+	border: dashed 2px;
+	border-color: #000;
+	height: 25vh;
+	margin: 0.25em;
+	padding: 0.25em;
+	width: 25vw;
+	
+}
