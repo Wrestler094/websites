@@ -40,7 +40,7 @@
 			</ol>
 			<li>Drawing a rectangle is the most intuitive</li>
 			<li>To standardize the soccer field, it needs to be relative to a pixel multiplier, not the length or width of the field.  For simplicity and generally, soccer field lengths/widths may change but the 18-yd and 6-yd boxes are always the same, along with the penalty spot and (for me) the center circle radius.</li>
-			<li>To standardize, I need to get the height and width of the canvas which shouldn't be too difficult.  And then, once I create my multiplier which can just be: multiplier = height (in pixels) / 100 (standard length of field in yards).</li>
+			<li>To standardize, I need to get the height and width of the canvas.  Every x-coordinate must be relative to width, y-coordinate relative to height and then I can use hard values for measurements that shouldn't change (i.e. 18yd, 6yd, penalty spot, etc.)</li>
 		</ol>
 	</div>
 
@@ -152,30 +152,14 @@
 	
 	<br>
 
+	<div>
+		Links to explore further:
+		<ol>
+			<li>Make a clock that "ticks" using canvas: <a href="http://www.w3schools.com/canvas/canvas_clock.asp">W3Schools Clock Page</a></li>
+			<li></li>
+		</ol>
+	</div>
 
-
-		<canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;">
-		Your browser does not support the HTML5 canvas tag.</canvas>
-
-	<script>
-	var c = document.getElementById("myCanvas3");
-	var ctx = c.getContext("2d");
-	ctx.moveTo(0,0);
-	ctx.lineTo(200,100);
-	ctx.stroke();
-	</script>
-
-	<br>
-	<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #c3c3c3;">
-	Your browser does not support the HTML5 canvas tag.
-	</canvas>
-
-	<script>
-	var c = document.getElementById("myCanvas2");
-	var ctx = c.getContext("2d");
-	ctx.fillStyle = "#FF0000";
-	ctx.fillRect(0,0,150,75);
-	</script>
 
 </body>
 </html>
