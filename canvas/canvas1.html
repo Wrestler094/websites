@@ -1,0 +1,57 @@
+<!-- canvas1.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colin's First Canvas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<h1>Welcome to Colin's Canvas</h1>
+	<p>Notes on Canvas:</p>
+	<ol>
+		<li>Canvas does not seem to work well with CSS.  It has only two properties (height, width) which should be explicitly styled in the html</li>
+		<li></li>
+	</ol>
+	<canvas id="myCanvas" width="420" height="420" style="border:1px solid #c3c3c3;">
+	Your browser does not support the HTML5 canvas tag.
+	</canvas>
+
+	<script>
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.fillStyle = "#33bb33";
+	ctx.fillRect(10,10,400,400);
+	</script>
+	
+	<br>
+		<canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+	<script>
+	var c = document.getElementById("myCanvas3");
+	var ctx = c.getContext("2d");
+	ctx.moveTo(0,0);
+	ctx.lineTo(200,100);
+	ctx.stroke();
+	</script>
+
+	<br>
+	<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #c3c3c3;">
+	Your browser does not support the HTML5 canvas tag.
+	</canvas>
+
+	<script>
+	var c = document.getElementById("myCanvas2");
+	var ctx = c.getContext("2d");
+	ctx.fillStyle = "#FF0000";
+	ctx.fillRect(0,0,150,75);
+	</script>
+
+</body>
+</html>
