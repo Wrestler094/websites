@@ -1,0 +1,138 @@
+<!-- canvas2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animated Soccer Field</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<h1>Formation and Tactic Builder</h1>
+	<div id="notes">
+
+		
+	</div>
+
+	<br>
+
+	<div id="soccer-box">
+
+		<!-- <div id="player-list">
+			Starting Field Players:<br>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			Starting Goalie:<br>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			Bench:<br>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+
+		</div> -->
+
+		<canvas id="myCanvas" width="500" height="750">
+		Your browser does not support the HTML5 canvas tag.
+		</canvas>
+
+		<script>
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+
+		var height = document.getElementById("myCanvas").height;
+		var width = document.getElementById("myCanvas").width;
+		var half_height = height/2;
+		var half_width = width/2;
+		var multiplier = height/100;
+
+		drawField();
+
+		function drawField() {
+
+			ctx.fillStyle = "#33bb33";
+			ctx.fillRect(0,0,width,height);
+
+			// Set the color of each of the lines or shapes that I draw 
+			ctx.strokeStyle = "#fff";
+			
+			// Middle Line
+			ctx.moveTo(0,half_height);
+			ctx.lineTo(width,half_height);
+			ctx.stroke();
+
+			// Center Circle
+			ctx.beginPath();
+			ctx.arc(half_width,half_height,multiplier*10,0,2*Math.PI);
+			ctx.stroke();
+
+			// Corner Arcs: Top-Right, Bot-Right, Bot-Left, Top-Left
+			var cornerRadius = multiplier;
+			ctx.beginPath();
+			ctx.arc(width,0,cornerRadius,0.5*Math.PI,1.0*Math.PI);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(width,height,cornerRadius,1.0*Math.PI,1.5*Math.PI);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(0,height,cornerRadius,1.5*Math.PI,2.0*Math.PI);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(0,0,cornerRadius,0*Math.PI,0.5*Math.PI);
+			ctx.stroke();
+
+			// Top Goal Area: (18-yd, 6yd, Penalty spot, Arc)
+			ctx.strokeRect(2/15*width, 0, 44/60*width, multiplier*18); // 18-yd box
+			ctx.strokeRect(1/3*width, 0, 20/60*width, multiplier*6); //6-yd box
+			ctx.moveTo(29.5/60*width,multiplier*12); // penalty spot
+			ctx.lineTo(30.5/60*width,multiplier*12);
+			ctx.stroke();
+
+			ctx.beginPath(); // 18-yd box circle
+			ctx.arc(0.5*width,multiplier*18,multiplier*4,0*Math.PI,1*Math.PI);
+			ctx.stroke();
+
+			// Bottom Goal Area: (18-yd, 6yd, Penalty spot, Arc
+			ctx.strokeRect(2/15*width, multiplier*82, 44/60*width, multiplier*18); // 18-yd box
+			ctx.strokeRect(1/3*width, multiplier*94, 20/60*width, multiplier*6); //6-yd box
+			ctx.moveTo(29.5/60*width,multiplier*88); // penalty spot
+			ctx.lineTo(30.5/60*width,multiplier*88);
+			ctx.stroke();
+
+			ctx.beginPath(); // 18-yd box circle
+			ctx.arc(0.5*width,multiplier*82,multiplier*4,1.0*Math.PI,2.0*Math.PI);
+			ctx.stroke();
+
+		}
+		</script>
+		
+	</div>	
+	
+	<br>
+	<br>
+
+	<div>
+		Links to explore further:
+		<ol>
+			<li></li>
+		</ol>
+	</div>
+
+
+</body>
+</html>
