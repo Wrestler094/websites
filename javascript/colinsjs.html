@@ -10,6 +10,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 </head>
 <body>
 
@@ -39,14 +40,124 @@
     }
 	</script>
 
-
-	<div>Dates</div><br>
+  <hr>
+	<h3>Time &amp; Dates</h3><br>
 	<script type="text/javascript">
     var d = new Date(2016, 05, 02);
-    document.write("This is Colin's Date: ", "<br>");
+    document.write("This is Colin's Date: ",d, "<br>");
     document.write("Full Year: ", d.getFullYear(), "<br>");
     document.write("Month: ", d.getMonth(), "<br>");
 
+    function newDate() {
+      var curDate = new Date();
+      document.getElementById('date-div2').innerHTML = Date();
+    }
+
+    // Document.write Button section
+    function randomText() {
+      document.write("1. Random text!  Notice how the entire page got wiped out.  You're going to have to refresh to go back to where we were.");
+      document.write("<br><br>");
+      document.write("2. This random text is actually being shown via multiple document.write lines of code, meaning that although the randomText() function does all of them, they don't write over each other.");
+      document.write("<br><br>");
+      document.write("<h1>This is an h1 tag</h1>");
+      document.write("<a href='colinsjs.html'>Refresh Page</a>");
+    }
 	</script>
+
+  <button onclick="getElementById('demo').innerHTML=Date()">The time is?</button>
+  <p id="demo"></p><br>
+
+  <button onclick="getElementById('date-div').innerHTML=Date()">Time (in element JS)</button>
+  <div id="date-div"></div><br>
+
+  <button onclick="newDate()">Time (in function)</button>
+  <div id="date-div2"></div>
+  <br>
+  <hr>
+
+  <h3>Document.write Button</h3>
+  <p>The button below uses "document.write" to display some text.</p>
+  <button onclick="randomText()">Random Text Function</button>
+  <hr>
+  <h3>Data Validation</h3>
+  <p>Enter a number between 1 and 10:</p>
+  <input id="num">
+  <button type="button" onclick="validNum()">Submit</button>
+  <div id="input-check"></div>
+
+  <script type="text/javascript">
+    function validNum() {
+      value = document.getElementById("num").value;
+      if (isNaN(value) || value < 1 || value > 10){
+        text = "The value you submitted is less than 1, greater than 10, or is not a number."
+      } else {
+        text = "Alright buddy.......here we go."
+      }
+      document.getElementById("input-check").innerHTML = text;
+    }
+
+  </script>
+  <br>
+  <br>
+  <hr>
+  <h3>jQuery Practice</h3>
+  <script>
+    $(document).ready(function(){
+        $(".disappear").click(function(){
+            $(this).hide();
+        });
+
+        $(".disappear2").dblclick(function(){
+            $(this).hide();
+        });
+
+        $("#red-box").mouseenter(function(){
+            // alert("You entered the RED BOX!");
+            $("#action-box").text("You just entered the RED BOX!");
+        });
+
+        $("#blue-box").mouseleave(function(){
+          $("#action-box").text("You just left the BLUE BOX!");
+        });
+
+        $("#yellow-box").mousedown(function(){
+            $("#action-box").text("You just mousedown-ed the YELLOW BOX!");
+        });
+
+        $("#green-box").mouseup(function(){
+            $("#action-box").text("You just mouseup-ed the GREEN BOX!");
+        });
+
+        $("#purple-box").hover(function(){
+          $("#action-box").text("You are hovering over the PURPLE BOX!");
+        },
+          function(){
+            $("#action-box").text("You just left the PURPLE BOX!");  
+        });
+
+
+
+    });
+
+  </script>
+  <h4>Click</h4>
+    <p class="disappear">If you click on this, it will disappear!</p>
+    <p class="disappear">And same with this!</p>
+  <h4>Double Click</h4>
+    <p class="disappear2">You gotta double click this one!</p>
+  <h4>Action Boxes!!</h4>
+    <div id="red-box" style="display: inline-block; background-color: red; height: 100px; width: 100px;"></div>
+    <div id="blue-box" style="display: inline-block; background-color: blue; height: 100px; width: 100px;"></div>
+    <div id="green-box" style="display: inline-block; background-color: green; height: 100px; width: 100px;"></div>
+    <div id="yellow-box" style="display: inline-block; background-color: yellow; height: 100px; width: 100px;"></div>
+    <div id="purple-box" style="display: inline-block; background-color: purple; height: 100px; width: 100px;"></div>
+    <div id="action-box" style="text-align: center; padding: 10px; color: white; background-color: black; height: 50px; width: 510px; border-radius: 2px;"></div>
+
+
+  
+
+  <br>
+  <br>
+  <br>  
 </body>
 </html>
