@@ -100,43 +100,69 @@
   <br>
   <br>
   <hr>
-  <h3>jQuery Practice</h3>
+  <h2>jQuery Practice</h2>
+  <h3>Level 1</h3>
   <script>
     $(document).ready(function(){
-        $(".disappear").click(function(){
-            $(this).hide();
-        });
+      $(".disappear").click(function(){
+          $(this).hide();
+      });
 
-        $(".disappear2").dblclick(function(){
-            $(this).hide();
-        });
+      $(".disappear2").dblclick(function(){
+          $(this).hide();
+      });
 
-        $("#red-box").mouseenter(function(){
-            // alert("You entered the RED BOX!");
-            $("#action-box").text("You just entered the RED BOX!");
-        });
+      $("#red-box").mouseenter(function(){
+          // alert("You entered the RED BOX!");
+          $("#action-box").text("You just entered the RED BOX!");
+      });
 
-        $("#blue-box").mouseleave(function(){
-          $("#action-box").text("You just left the BLUE BOX!");
-        });
+      $("#blue-box").mouseleave(function(){
+        $("#action-box").text("You just left the BLUE BOX!");
+      });
 
-        $("#yellow-box").mousedown(function(){
-            $("#action-box").text("You just mousedown-ed the YELLOW BOX!");
-        });
+      $("#yellow-box").mousedown(function(){
+          $("#action-box").text("You just mousedown-ed the YELLOW BOX!");
+      });
 
-        $("#green-box").mouseup(function(){
-            $("#action-box").text("You just mouseup-ed the GREEN BOX!");
-        });
+      $("#green-box").mouseup(function(){
+          $("#action-box").text("You just mouseup-ed the GREEN BOX!");
+      });
 
-        $("#purple-box").hover(function(){
-          $("#action-box").text("You are hovering over the PURPLE BOX!");
+      $("#purple-box").hover(function(){
+        $("#action-box").text("You are hovering over the PURPLE BOX!");
+      },
+        function(){
+          $("#action-box").text("You just left the PURPLE BOX!");  
+      });
+
+      $(".input1").focus(function(){
+        $(this).css("background-color", "#ddd")
+      });
+      $(".input1").blur(function(){
+        $(this).css("background-color", "#fff")
+      });
+
+      $("#on-method").on({
+        mouseenter:function(){
+          $(this).text("You just entered the box");
+          $(this).css("background-color", "yellow");
         },
-          function(){
-            $("#action-box").text("You just left the PURPLE BOX!");  
-        });
+        mouseleave:function(){
+          $(this).text("You just LEFT the box!");
+          $(this).css("background-color", "black");
+          $(this).css("color", "white")
+        },
+        click:function(){
+          $(this).text("You clicked! Keep clicking to change color!");
+          rand = "#" + Math.random().toString(16).slice(2,8);
+          $(this).css("background-color", rand);
+        }
+      });
 
 
-//adding a comment
+
+//This is the end of the document.ready function
     });
 
   </script>
@@ -152,6 +178,13 @@
     <div id="yellow-box" style="display: inline-block; background-color: yellow; height: 100px; width: 100px;"></div>
     <div id="purple-box" style="display: inline-block; background-color: purple; height: 100px; width: 100px;"></div>
     <div id="action-box" style="text-align: center; padding: 10px; color: white; background-color: black; height: 50px; width: 510px; border-radius: 2px;"></div>
+  <h4>Focus boxes</h4>
+    <div>Name: <input class="input1"></input></div>
+    <div>Email:  <input class="input1"></input></div>
+  <h4>The on() Method</h4>
+    <p>This allows you to attach one or more events for the selected elements</p>
+    <div id="on-method" style="text-align: center; padding: 2em; display: block; background-color: yellow; height: 100px; width: 200px; border-radius: 8px;"></div>
+
 
 
   

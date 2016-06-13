@@ -1,0 +1,30 @@
+<!-- euler-3s-5s.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Euler - Three's and Five's</title>
+</head>
+<body>
+	<script>
+		var array = [];
+		for (var i = 0; i <=1000; i++) {
+			var sum = 0;
+			
+			if (i % 3 == 0 || i % 5 == 0){
+				sum += i;
+				array.push(sum);
+			}
+		}
+		console.log(array[5]);
+		console.log(array[25]);
+		console.log(array[46]);
+		console.log(array.length);
+		var big_sum = 0
+		for (i = 0; i < array.length; i++){
+			big_sum += array[i];
+		}
+		console.log(big_sum);
+	</script>
+
+</body>
+</html>
