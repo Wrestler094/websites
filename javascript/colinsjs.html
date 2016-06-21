@@ -378,7 +378,19 @@
       
        }  // End of compare function
     </script>
-
+  <br>
+  <hr>
+  <br>
+  <div class="fruit" onclick="fruit(this)">Apple</div>
+  <div class="fruit" onclick="fruit(this)">Banana</div>
+  <div class="fruit" onclick="fruit(this)">Strawberry</div>
+  <div id="display"></div>
+  <script>
+    function fruit(this) {
+      text = this.innerHTML;
+      document.getElementById("display").innerHTML = text;
+    }
+  </script>
   
     
 

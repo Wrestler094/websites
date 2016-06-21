@@ -132,3 +132,16 @@ h1 {
 	color: white;
 	background-color: #005;
 }
+.fruit {
+	display: inline-block;
+	border: black 1px solid;
+	width: 150px;
+	height: 75px;
+	border-radius: 5px;
+	vertical-align: middle;
+}
+#display {
+	width: 300px;
+	height: 150px;
+	border: black 1px solid;
+}
