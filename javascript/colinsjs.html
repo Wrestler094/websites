@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" href="../stylesheets/colinsjs_styles.css" media="screen">
   <script src="https://use.fontawesome.com/72f616730d.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  
 </head>
 <body>
 
@@ -381,17 +382,12 @@
   <br>
   <hr>
   <br>
-  <div class="fruit" onclick="fruit(this)">Apple</div>
-  <div class="fruit" onclick="fruit(this)">Banana</div>
-  <div class="fruit" onclick="fruit(this)">Strawberry</div>
-  <div id="display"></div>
-  <script>
-    function fruit(this) {
-      text = this.innerHTML;
-      document.getElementById("display").innerHTML = text;
-    }
-  </script>
-  
+  <h2>Next Level</h2>
+  <button id="btn-386">Click Me</button>
+  <p>Great link on DOM events: <a href="https://www.smashingmagazine.com/2013/11/an-introduction-to-dom-events/">Introduction to DOM Events</a>.</p>
+  <p>This use the the one() method which I don't entirely understand yet...</p>
+  <button id="btn-388">jQuery one()</button>
+
     
 
 
@@ -401,5 +397,6 @@
   <br>
   <br>
   <br>  
+  <script type="text/javascript" src="js/colinsjs.js"></script>
 </body>
 </html>
