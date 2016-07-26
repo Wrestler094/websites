@@ -10,10 +10,11 @@
 	<link rel="stylesheet" type="text/css" href="css/rockpaperscissors.css"></style>
   <script src="https://use.fontawesome.com/72f616730d.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
-	<h1>Rock, Paper, Scissors!</h1>
+	<h1 id="big-title">Rock, Paper, Scissors!</h1>
 	<div>
 
 		<div id="player-names">
@@ -31,34 +32,37 @@
 		<br>
 
 		<div id="selection">
-      <i id="rock" class="select fa fa-hand-rock-o fa-4x" onclick="rockpaperscissors(this)"></i>
-      <i id="paper" class="select fa fa-hand-paper-o fa-4x" onclick="rockpaperscissors(this)"></i>
-      <i id="scissors" class="select fa fa-hand-scissors-o fa-4x" onclick="rockpaperscissors(this)"></i>
+      <i id="rock" class="select fa fa-hand-rock-o fa-4x"></i>
+      <i id="paper" class="select fa fa-hand-paper-o fa-4x"></i>
+      <i id="scissors" class="select fa fa-hand-scissors-o fa-4x"></i>
     </div>
 		<br>
+
+		<!-- Animated fists -->
+
 		<div>
-			<div class="animated-fist">
-				<i id="player-fist" class="fa fa-hand-rock-o fa-4x"></i>
+			<div class="fist-box">
+				<i id="player-fist" class="animated-fist fa fa-hand-rock-o fa-4x"></i>
 			</div>
-			<div class="animated-fist">
-				<i id="computer-fist" class="fa fa-hand-rock-o fa-4x"></i>
+			<div class="fist-box">
+				<i id="computer-fist" class="animated-fist fa fa-hand-rock-o fa-4x"></i>
 			</div>
 		</div>
 
 		<!-- This is what the player and computer ultimately pick -->
 		<div id="rps-display">
-			<div id="player-display">
-			</div>
-			<div id="computer-display">
-			</div>
+			<div id="player-display"></div>
+			<div id="computer-display"></div>
 		</div>
-
+		
+		<br>
 		<div id="rps-explanation"></div>
 
 
 		
 	</div>
 
-	  <script src="js/rockpaperscissors.js"></script>
+  <script src="js/rockpaperscissors.js"></script>
+
 </body>
 </html>

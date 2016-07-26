@@ -2,16 +2,17 @@
 h1 {
 	text-align: center;
 }
+
 .animated-fist {
-	border-radius: 4px;
+	/*border-radius: 4px;
 	display: inline-block;
-	font-size: 2em;
+	font-size: 1em;
 	margin-left: 13vw;
 	text-align: center;
-	width: 30vw;
+	width: 30vw;*/
 }
 
-/* NAMES: The div that holds the player names and the player names themselves */
+/* START Names: The div that holds the player names and the player names themselves */
 
 #player-names {
 	display: block;
@@ -28,7 +29,11 @@ h1 {
 	width: 30vw;
 }
 
-/* SCORES: The scores-containing div and each of the player and computer scores */
+/* END Names */
+
+
+
+/* START Scores: The scores-containing div and each of the player and computer scores */
 
 #scores {
 	display: block;
@@ -45,7 +50,10 @@ h1 {
 	width: 30vw;
 }
 
-/* MATCHES: The small div that holds that number of matches played thus far. */
+/* END Scores */
+
+
+/* START Matches: The small div that holds that number of matches played thus far. */
 #matches-display {
 	margin-left: 13vw;
 	font-size: 2em;
@@ -54,6 +62,8 @@ h1 {
 #matches-num {
 	display: inline-block;
 }
+
+/* END Matches */
 
 
 
@@ -72,48 +82,70 @@ h1 {
 	cursor: pointer;
 }
 
+
+ /* START rps-explanation - This is the insult or written result of the game */
+ 
 #rps-explanation {
+	display: inline-block;
+	font-family: 'Slabo 27px', serif;
+	font-size: 5vh;
 	height: 10vh;
-	border: black 1px solid;
+	/*border: black 1px solid;*/
+	margin: 10px 8vw;
 	text-align: center;
+	width: 80vw;
 }
+
+/* END rps-explanation */
 #rps-display {
 	/*border: black 1px solid;*/
 }
 
 #player-display, #computer-display {
-	border: 1px black solid;
+	/*border: 1px black solid;*/
 	border-radius: 4px;
 	display: inline-block;
-	font-size: 1em;
+	font-size: 5em;
 	margin-left: 13vw;
 	text-align: center;
 	width: 30vw;
 }
 
-#player-fist {
-	-webkit-transform: rotate(90deg);
+#player-fist, #computer-fist {
+	font-size: 15vh;
+	position: relative;
+}
 
+
+/* START Animated fists */
+
+#player-fist {
+	/* Rotation of Fist (Left Fist) */
+	-webkit-transform: rotate(90deg);
 	/* Firefox */
 	-moz-transform: rotate(90deg);
-
 	/* IE */
 	-ms-transform: rotate(90deg);
-
 	/* Opera */
 	-o-transform: rotate(90deg);
+	    
 }
 
 #computer-fist {
-  
   transform: rotate(-90deg) scaleX(-1, 1);
 	-moz-transform: rotate(-90deg) scale(-1, 1);
-  
   -o-transform: rotate(-90deg) scale(-1, 1);
-  
 	-webkit-transform: rotate(-90deg) scale(-1, 1);    
-  
   -ms-transform: rotate(-90deg) scale(-1, 1);
-  	
 }
 
+.fist-box {
+	/*border: 1px solid;*/
+	display: inline-block;
+	width: 30vw;
+	height: 15vh;
+	margin-left: 13vw;
+	text-align: center;
+}
+
+/* END Animated fists */
