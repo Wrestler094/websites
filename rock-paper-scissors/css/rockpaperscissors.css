@@ -3,6 +3,13 @@ h1 {
 	text-align: center;
 }
 
+#setup{
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Slabo 27px', serif;
+	margin-bottom: 5px;
+}
+
 .animated-fist {
 	/*border-radius: 4px;
 	display: inline-block;
