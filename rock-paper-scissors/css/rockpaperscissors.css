@@ -217,12 +217,17 @@ h1 {
 	}
 
 	#player, #computer, #player-score, #computer-score {
+		border: 1px black solid;
+		border-radius: 4px;
+		font-size: 6vw;
 		margin-left: 4vw;
 		text-align: center;
 		width: 40vw;
-		border: 1px black solid;
-		border-radius: 4px;
 	}
+
+	#player-score, #computer-score {
+		font-size: 9vw;
+	}	
 
 
 	#selection {
