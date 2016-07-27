@@ -99,7 +99,7 @@ h1 {
 #rps-explanation {
 	display: inline-block;
 	font-family: 'Slabo 27px', serif;
-	font-size: 5vh;
+	font-size: 6vw;
 	height: 10vh;
 	/*border: black 1px solid;*/
 	margin: 30px 8vw;
@@ -219,12 +219,15 @@ h1 {
 	#player, #computer, #player-score, #computer-score {
 		border: 1px black solid;
 		border-radius: 4px;
-		font-size: 6vw;
+		
 		margin-left: 4vw;
 		text-align: center;
 		width: 40vw;
 	}
 
+	#player, #computer {
+		font-size: 6vw;
+	}
 	#player-score, #computer-score {
 		font-size: 9vw;
 	}	
