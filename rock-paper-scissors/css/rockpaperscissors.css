@@ -51,6 +51,8 @@ h1 {
 
 	display: inline-block;
 	font-size: 5em;
+	background-color: #004d00;
+	color: #EAEEF2;
 }
 
 /******* END Scores */
@@ -206,8 +208,34 @@ h1 {
 		cursor: pointer;
 	}
 
+}
+
+@media screen and (max-width:600px) {
 	
+	#player, #computer, #player-score, #computer-score {
+		margin-left: 4vw;
+		text-align: center;
+		width: 40vw;
+		border: 1px black solid;
+		border-radius: 4px;
+	}
 
 
+	#selection {
+		/*display: inline-block;*/
+		/*border: blue 4px solid;*/
+		font-size: 6vh;
+		margin: 0 auto;
+		margin-bottom: 50px;
+		text-align: center;
+
+	}
+
+	#selection > .fa:hover {
+		color: blue;
+		background-color: black;
+		border-radius: 5px;
+		cursor: pointer;
+	}
 
 }
