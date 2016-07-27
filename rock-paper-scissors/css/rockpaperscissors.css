@@ -10,16 +10,9 @@ h1 {
 	margin-bottom: 5px;
 }
 
-.animated-fist {
-	/*border-radius: 4px;
-	display: inline-block;
-	font-size: 1em;
-	margin-left: 13vw;
-	text-align: center;
-	width: 30vw;*/
-}
 
-/* START Names: The div that holds the player names and the player names themselves */
+
+/******** START Names: The div that holds the player names and the player names themselves */
 
 #player-names {
 	display: block;
@@ -31,16 +24,23 @@ h1 {
 	border-radius: 4px;
 	display: inline-block;
 	font-size: 2em;
+	
+}
+
+/******* END Names *******/
+
+/******** START - Both the Player/Comp names and Score ********/
+#player, #computer, #player-score, #computer-score {
 	margin-left: 13vw;
 	text-align: center;
 	width: 30vw;
+	border: 1px black solid;
+	border-radius: 4px;
 }
 
-/* END Names */
+/******** END - Both the Player/Comp names and Score ********/
 
-
-
-/* START Scores: The scores-containing div and each of the player and computer scores */
+/******* START Scores: The scores-containing div and each of the player and computer scores */
 
 #scores {
 	display: block;
@@ -48,38 +48,38 @@ h1 {
 }
 
 #player-score, #computer-score {
-	border: 1px black solid;
-	border-radius: 4px;
+
 	display: inline-block;
 	font-size: 5em;
-	margin-left: 13vw;
-	text-align: center;
-	width: 30vw;
 }
 
-/* END Scores */
+/******* END Scores */
 
 
-/* START Matches: The small div that holds that number of matches played thus far. */
+/******* START Matches: The small div that holds that number of matches played thus far. */
 #matches-display {
-	margin-left: 13vw;
-	font-size: 2em;
+	font-size: 1.5em;
+	text-align: center;
 }
 
 #matches-num {
 	display: inline-block;
 }
 
-/* END Matches */
+/******* END Matches */
 
 
+/********* START Selection: this holds what the player can choose **********/
 
 #selection {
 	/*display: inline-block;*/
-	border: blue 4px solid;
+	/*border: blue 4px solid;*/
+	font-size: 25px;
 	margin: 0 auto;
+	margin-bottom: 0px;
 	text-align: center;
-	width: 30vw;
+	
+	/*width: 60vw;*/
 }
 
 #selection > .fa:hover {
@@ -89,8 +89,9 @@ h1 {
 	cursor: pointer;
 }
 
+/********* END Selection ***********/
 
- /* START rps-explanation - This is the insult or written result of the game */
+/******* START rps-explanation - This is the insult or written result of the game */
  
 #rps-explanation {
 	display: inline-block;
@@ -98,33 +99,23 @@ h1 {
 	font-size: 5vh;
 	height: 10vh;
 	/*border: black 1px solid;*/
-	margin: 10px 8vw;
+	margin: 30px 8vw;
 	text-align: center;
 	width: 80vw;
 }
 
 /* END rps-explanation */
-#rps-display {
-	/*border: black 1px solid;*/
-}
 
-#player-display, #computer-display {
-	/*border: 1px black solid;*/
-	border-radius: 4px;
-	display: inline-block;
-	font-size: 5em;
-	margin-left: 13vw;
-	text-align: center;
-	width: 30vw;
-}
+
+
+/*********** START Animated fists **********/
+
 
 #player-fist, #computer-fist {
-	font-size: 15vh;
+	font-size: 100px;
 	position: relative;
 }
 
-
-/* START Animated fists */
 
 #player-fist {
 	/* Rotation of Fist (Left Fist) */
@@ -150,9 +141,73 @@ h1 {
 	/*border: 1px solid;*/
 	display: inline-block;
 	width: 30vw;
-	height: 15vh;
+	/*height: 15vh;*/
 	margin-left: 13vw;
 	text-align: center;
 }
 
-/* END Animated fists */
+/******** END Animated fists *********/
+
+/* Smaller Screen */
+@media screen and (max-width:1100px) {
+	
+	#player, #computer, #player-score, #computer-score {
+		margin-left: 8vw;
+		text-align: center;
+		width: 35vw;
+		border: 1px black solid;
+		border-radius: 4px;
+	}
+
+
+	#selection {
+		/*display: inline-block;*/
+		/*border: blue 4px solid;*/
+		font-size: 25px;
+		margin: 0 auto;
+		margin-bottom: 0px;
+		text-align: center;
+
+	}
+
+	#selection > .fa:hover {
+		color: blue;
+		background-color: black;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+}
+
+@media screen and (max-width:970px) {
+	
+	#player, #computer, #player-score, #computer-score {
+		margin-left: 4vw;
+		text-align: center;
+		width: 40vw;
+		border: 1px black solid;
+		border-radius: 4px;
+	}
+
+
+	#selection {
+		/*display: inline-block;*/
+		/*border: blue 4px solid;*/
+		font-size: 25px;
+		margin: 0 auto;
+		margin-bottom: 50px;
+		text-align: center;
+
+	}
+
+	#selection > .fa:hover {
+		color: blue;
+		background-color: black;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	
+
+
+
+}

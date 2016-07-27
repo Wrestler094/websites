@@ -3,6 +3,9 @@
 var playerScore = 0;
 var computerScore = 0;
 var matches = 0;
+var wins = 0;
+var losses = 0;
+var ties = 0;
 var playerChoice = "";
 var player = "";
 var e = document.getElementById("player-display");
@@ -13,40 +16,45 @@ var d = document.getElementById("rps-explanation");
 document.getElementById("player-score").innerHTML = playerScore;
 document.getElementById("computer-score").innerHTML = computerScore;
 document.getElementById("matches-num").innerHTML = matches;
+
 var winsults = ["Wow, well done, you beat a fucking computer, you should feel real proud of yourself.", 
 	"Don't let this win go to your head...you are playing Rock-Paper-Scissors on a computer...by yourself.", 
 	"Well done!  You don't completely suck!", 
-	"The computer probably let you win..."];
+	"The computer probably let you win...",
+  "You motorboatin' son of a bitch! You old sailor you!"];
 
 var lossults = ["Ha! YOU SUCK!",
-	"Man, I bet you were up all night, working on that one!",
+	"Dude...you are complete garbage!",
 	"Some babies were dropped on their heads but you were clearly thrown at a wall.",
-	"YOU LOST!  THE EARTH IS FULL GO HOME.",
+	"The Earth is FULL...GO. HOME.",
 	"Wow, you are absolutely lousy at this...it's a KID'S GAME!",
 	"I'd love to insult you but now it's just getting sad"];
 
 var tiesults = ["Eh, you got lucky",
 	"Yay, a tie, that's sort of a big deal for you, huh?",
 	"It's a tie, bitches!!",
-	"You tied."]
+	"..........seriously, like what the fuck else am I supposed to say?  Here's a \'gold star\'?  He's your little \'trophy\' for trying?  Grow up..."]
 
 var winFunction = function(){
-	d.innerHTML = winsults[Math.floor(Math.random()*winsults.length)]
+	d.innerHTML = "YOU WIN! " + winsults[Math.floor(Math.random()*winsults.length)]
   playerScore += 1;
   matches += 1;
+  wins += 1;
 };
 
 var lossFunction = function(){
-	d.innerHTML = lossults[Math.floor(Math.random()*lossults.length)];
+	d.innerHTML = "YOU LOSE! " +  lossults[Math.floor(Math.random()*lossults.length)];
   computerScore += 1;
   matches += 1;
+  losses += 1;
 };
 
 var tieFunction = function(){
-	d.innerHTML = tiesults[Math.floor(Math.random()*tiesults.length)];
+	d.innerHTML = "YOU TIE! " + tiesults[Math.floor(Math.random()*tiesults.length)];
   matches += 1;
   playerScore += 0.5;
   computerScore += 0.5;
+  ties += 1;
 };
 
 	$(".select").click(function(){
@@ -169,6 +177,9 @@ var compare = function(choice1,choice2){
   document.getElementById("player-score").innerHTML = playerScore;
   document.getElementById("computer-score").innerHTML = computerScore;
   document.getElementById("matches-num").innerHTML = matches;
+  document.getElementById("wins-num").innerHTML = wins;
+  document.getElementById("losses-num").innerHTML = losses;
+  document.getElementById("ties-num").innerHTML = ties;
 };
 
 
