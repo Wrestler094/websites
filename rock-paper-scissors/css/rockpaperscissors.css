@@ -24,7 +24,7 @@ h1 {
 	border: 1px black solid;
 	border-radius: 4px;
 	display: inline-block;
-	font-size: 2em;
+	font-size: 6vw;
 	
 }
 
@@ -226,7 +226,7 @@ h1 {
 	}
 
 	#player, #computer {
-		font-size: 6vw;
+		font-size: 19vw;
 	}
 	#player-score, #computer-score {
 		font-size: 9vw;

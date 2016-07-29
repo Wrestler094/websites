@@ -1,0 +1,121 @@
+<!-- rockpaperscissors2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock, Paper, Scissors v2</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Colin McNamara">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/rockpaperscissors2.css" media="screen">
+	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- This is Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- This is my font-awesome script for cool icons -->
+  <script src="https://use.fontawesome.com/72f616730d.js"></script>
+	<!-- This is jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>Rock, Paper, Scissors!</h1>
+		</div>
+	</div>  <!-- Large Heading for the Rock, Paper, Scissors Page -->
+
+	<div class="container">
+		<div class="row" id="player-names">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" id="player">PLAYER</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" id="computer">COMPUTER</div>
+		</div>
+	</div>  <!-- End of row for Player and Computer names -->
+
+
+	<div class="container">
+		<div class="row" id="scores">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" id="player-score">27</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" id="computer-score">34</div>
+		</div>
+	</div> <!-- End of Player and Computer Scores -->
+
+	<div class="container">
+		<div class="row" id="match-header">
+			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3">Wins</div>
+			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3">Losses</div>
+			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3">Ties</div>
+			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3">Games</div>
+		</div>
+	</div> <!-- End of Match Statistics Headers -->
+
+
+
+	<div class="container" id="match-group">
+		<div class="row"  id="match-stats">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="wins-num"></div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="losses-num"></div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="ties-num"></div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="matches-num"></div>
+		</div>
+	</div> <!-- End of Match Statistics Section -->
+
+
+
+	<div class="container">
+		<div id="selection" class="row">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><h4>Choose Your Weapon:</h4></div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<i id="rock" class="hand fa fa-hand-rock-o"></i>
+      </div>  <!-- ROCK -->
+			<!-- <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div> -->
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<i id="paper" class="hand fa fa-hand-paper-o"></i>
+      </div>  <!-- PAPER -->
+			<!-- <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div> -->
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<i id="scissors" class="hand fa fa-hand-scissors-o"></i>
+			</div>  <!-- SCISSORS -->
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+		</div>
+	</div>  <!-- End of Player's selection of Rock, Paper or Scissors -->
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+			<div class="animated-fist col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<i id="player-fist" class="animated-fist fa fa-hand-rock-o"></i>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+			<div class="animated-fist col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<i id="computer-fist" class="animated-fist fa fa-hand-rock-o"></i>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+		</div>
+	</div> <!-- End of Animated Fists -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="rps-explanation"></div>
+		</div>
+	</div>  <!-- End of RPS Explanation and Insults -->
+
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+		</div>
+	</div>
+	
+	<!-- This is Bootstrap's JS file -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/rockpaperscissors2.js"></script>
+</body>
+</html>

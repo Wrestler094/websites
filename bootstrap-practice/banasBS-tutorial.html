@@ -1,0 +1,98 @@
+<!-- banas-tutorial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Derek Banas's Bootstrap Tutorial</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Colin McNamara">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- This is Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/banasBS-tutorial.css">
+	<!-- This is my font-awesome script for cool icons -->
+  <script src="https://use.fontawesome.com/72f616730d.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>Bootstrap Tutorial</h1>
+		</div>
+
+		<div class="jumbotron">
+			<p>This is the first line inside the JUMBOTRON! Whoo!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At beatae omnis quidem, totam aperiam! Nemo amet voluptas laudantium, praesentium autem ut cupiditate unde molestias? Praesentium voluptates voluptatibus necessitatibus reprehenderit numquam!</p> 
+
+			<p>Let's talk buttons:<br>
+				<a href="#" class="btn btn-default btn-lg" role="button">btn btn-default btn-lg</a><br>
+				<button type="submit" class="btn btn-danger" role="button">btn btn-danger</button><br>
+				<input type="button" value="Value field" class="btn btn-info"><br>
+				<button type="submit" class = "btn-primary btn-sm">btn-primary btn-sm</button><br>
+				<button type="submit" class = "btn btn-success btn-xs">btn btn-success btn-xs</button><br>
+				<button type="submit" class = "btn btn-warning btn-lg">btn btn-warning btn-lg</button><br>
+				<button type="submit" class = "btn btn-link btn-lg">btn btn-link btn-lg</button><br>
+				<button type="button" class="btn btn-lg btn-primary" disabled="disabled">disabled button</button><br>
+				<a href="#" class="btn btn-default btn-lg disabled" role="button">Link</a><br>
+				<div class="btn-group btn-group-lg" role="group">
+					<button type="button" class="btn btn-default">Small</button>
+					<button type="button" class="btn btn-default">Medium</button>
+					<button type="button" class="btn btn-default">Large</button>
+				</div>
+				<br>
+				<strong>Button Notes:</strong><br>
+				<ul>
+					<li>You can get rid of the "btn" if you want a specific size like btn-xs or btn-lg</li>
+					<li>If you want to style a particular kind of button, style the btn-primary, btn-success, etc, not "btn"</li>
+					<li>The one that says "Value field" is actually an input tag with type="button"</li>
+					<li>Each of the buttons are deliberately on a new line</li>
+				</ul>
+			</p> <!-- End of button paragraph -->
+		</div> <!-- End of Jumbotron div -->
+	</div> <!-- End of first tutorial container div -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<h4>Column 1</h4>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deserunt voluptates debitis, id. Tenetur impedit, corporis minus dolorem id a quibusdam voluptatum ducimus voluptates nisi officiis, mollitia, sequi labore nobis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolorem sint ipsum quas, porro quibusdam nam esse praesentium, assumenda magnam officiis perferendis et cupiditate totam deleniti numquam saepe nesciunt quis!
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<h4>Column 2</h4>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deserunt voluptates debitis, id. Tenetur impedit, corporis minus dolorem id a quibusdam voluptatum ducimus voluptates nisi officiis, mollitia, sequi labore nobis?
+			</div>
+			<div class="clearfix visible-sm"></div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<h4>Column 3</h4>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deserunt voluptates debitis, id. Tenetur impedit, corporis minus dolorem id a quibusdam voluptatum ducimus voluptates nisi officiis, mollitia, sequi labore nobis?
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<h4>Column 4</h4>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deserunt voluptates debitis, id. Tenetur impedit, corporis minus dolorem id a quibusdam voluptatum ducimus voluptates nisi officiis, mollitia, sequi labore nobis?
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+				<h4><a href="#col1Content" data-toggle="collapse">Column1</a></h4>
+				<div class="collapse in" id="col1Content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, enim. Consequatur facere necessitatibus fugiat non voluptatem, ea ducimus maxime! Dolor alias reprehenderit natus cupiditate, autem voluptatibus. Commodi voluptatum, dicta qui.</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+
+
+
+	<!-- This is Bootstrap's JS file -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- This is jQuery -->	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</body>
+</html>
