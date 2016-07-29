@@ -3,6 +3,9 @@ body {
 	text-align: center;
 }
 
+#rps-header {
+	font-size: 4rem;
+}
 
 
 /******** START Player and Computer Names ********/
@@ -53,6 +56,10 @@ body {
 #selection {
 	font-size: 8rem;
 	margin-bottom: 50px;
+}
+
+#weapon {
+	font-size: 2rem;
 }
 
 .hand:hover {
@@ -107,13 +114,43 @@ body {
 
 
 
-
-
-
 /******** END Rock-Paper-Scissors Explanation ********/
 
 
+@media screen and (max-width: 768px){
+	#rps-header {
+		font-size: 3rem;
+	}
 
+	#player-score, #computer-score {
+		font-size: 10vw;
+	}
+
+	#match-header {
+		font-size: 1.5rem;
+		
+	}
+
+	#match-stats {
+		border: 1px solid;
+		height: 7vh;
+		font-size: 3rem;
+	}
+
+	#weapon {
+		font-size: 1.5rem;
+		padding-top: 2.5rem;
+	}
+
+	#rps-explanation {
+	
+	font-size: 2.5rem;
+	
+	
+	
+}
+
+}
 
 
 
