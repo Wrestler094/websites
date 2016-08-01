@@ -8,18 +8,20 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Colin McNamara">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/rockpaperscissors2.css" media="screen">
+	
 	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <!-- This is Bootstrap -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- This is MY Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/rockpaperscissors2.css" media="screen">
 	<!-- This is my font-awesome script for cool icons -->
   <script src="https://use.fontawesome.com/72f616730d.js"></script>
 	<!-- This is jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="page-header">
 			<h1 id="rps-header">Rock, Paper, Scissors!</h1>
 		</div>
@@ -42,23 +44,18 @@
 		</div>
 	</div> <!-- End of Player and Computer Scores -->
 
-	<div class="container">
+	<div class="container" id="match-group">
 		<div class="row" id="match-header">
 			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3">Wins</div>
 			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3">Losses</div>
 			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3">Ties</div>
 			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3">Games</div>
-		</div>
-	</div> <!-- End of Match Statistics Headers -->
-
-
-
-	<div class="container" id="match-group">
+		</div> <!-- End of Match Statistics Headers -->
 		<div class="row"  id="match-stats">
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="wins-num"></div>
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="losses-num"></div>
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="ties-num"></div>
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="matches-num"></div>
+			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3" id="wins-num"></div>
+			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3" id="losses-num"></div>
+			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3" id="ties-num"></div>
+			<div class="stats col-lg-3 col-md-3 col-sm-3 col-xs-3" id="matches-num"></div>
 		</div>
 	</div> <!-- End of Match Statistics Section -->
 
@@ -88,11 +85,11 @@
 			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
 			<div class="animated-fist col-lg-3 col-md-3 col-sm-3 col-xs-3">
 				<i id="player-fist" class="animated-fist fa fa-hand-rock-o"></i>
-			</div>
+			</div> <!--  Left Fist -->
 			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
 			<div class="animated-fist col-lg-3 col-md-3 col-sm-3 col-xs-3">
 				<i id="computer-fist" class="animated-fist fa fa-hand-rock-o"></i>
-			</div>
+			</div> <!-- Right Fist -->
 			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
 		</div>
 	</div> <!-- End of Animated Fists -->
@@ -112,6 +109,18 @@
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
 		</div>
+	</div>
+
+	<div class="container" id="links">
+		<div class="row">
+			<p>
+			Cool Links:<br>
+			<ol>
+				<li><a href="http://www.nytimes.com/interactive/science/rock-paper-scissors.html?_r=0">New York Times</a></li>
+			</ol>
+			</p>
+		</div>
+		
 	</div>
 	
 	<!-- This is Bootstrap's JS file -->

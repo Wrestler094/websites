@@ -3,6 +3,10 @@ body {
 	text-align: center;
 }
 
+.page-header {
+	margin-top: 10px;
+}
+
 #rps-header {
 	font-size: 4rem;
 }
@@ -11,7 +15,9 @@ body {
 /******** START Player and Computer Names ********/
 
 #player, #computer {
+	border: 1px solid;
 	font-size: 4vw;
+	
 }
 
 
@@ -20,7 +26,10 @@ body {
 /******** START Player and Computer Scores ********/
 
 #player-score, #computer-score {
+	background-color: #000080;
+	color: #fff;
 	font-size: 6vw;
+	margin-bottom: 4px;
 }
 
 
@@ -28,16 +37,30 @@ body {
 
 
 /******** START Match Headers and Stats ********/
+.stats {
+	border-right: 1px dashed grey;
+}
+
+.stats:nth-child(4){
+	border-right: none;
+}
+
+#match-group {
+	border: 1px solid;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+}
 #match-header {
 	border: 1px solid;
 	font-size: 2rem;
-	height: 5vh;
+	/*height: 5vh;*/
 	/*padding-top: 1vh;*/
 }
 
 #match-stats {
 	border: 1px solid;
-	height: 7vh;
+	
+	/*height: 7vh;*/
 	font-size: 4rem;
 }
 
@@ -55,7 +78,7 @@ body {
 
 #selection {
 	font-size: 8rem;
-	margin-bottom: 50px;
+	margin-bottom: 35px;
 }
 
 #weapon {
@@ -117,7 +140,17 @@ body {
 /******** END Rock-Paper-Scissors Explanation ********/
 
 
+#links {
+	margin-top: 2rem;
+	text-align: left;
+}
+
+
 @media screen and (max-width: 768px){
+	.page-header {
+		margin-top: 10px;
+	}
+
 	#rps-header {
 		font-size: 3rem;
 	}
@@ -133,7 +166,7 @@ body {
 
 	#match-stats {
 		border: 1px solid;
-		height: 7vh;
+		/*height: 7vh;*/
 		font-size: 3rem;
 	}
 
