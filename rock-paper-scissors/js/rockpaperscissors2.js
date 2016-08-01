@@ -13,6 +13,7 @@ var c = document.getElementById("computer-display");
 var pf = document.getElementById("player-fist");
 var cf = document.getElementById("computer-fist");
 var d = document.getElementById("rps-explanation");
+var d2 = document.getElementById("rps-explanation2");
 document.getElementById("player-score").innerHTML = playerScore;
 document.getElementById("computer-score").innerHTML = computerScore;
 document.getElementById("matches-num").innerHTML = matches;
@@ -40,6 +41,7 @@ var tiesults = ["Eh, you got lucky",
 
 var winFunction = function(){
 	d.innerHTML = "YOU WIN! " + winsults[Math.floor(Math.random()*winsults.length)]
+  d2.innerHTML = "YOU WIN! " + winsults[Math.floor(Math.random()*winsults.length)]
   playerScore += 1;
   matches += 1;
   wins += 1;
@@ -47,6 +49,7 @@ var winFunction = function(){
 
 var lossFunction = function(){
 	d.innerHTML = "YOU LOSE! " +  lossults[Math.floor(Math.random()*lossults.length)];
+  d2.innerHTML = "YOU LOSE! " +  lossults[Math.floor(Math.random()*lossults.length)];
   computerScore += 1;
   matches += 1;
   losses += 1;
@@ -54,6 +57,7 @@ var lossFunction = function(){
 
 var tieFunction = function(){
 	d.innerHTML = "YOU TIE! " + tiesults[Math.floor(Math.random()*tiesults.length)];
+  d2.innerHTML = "YOU TIE! " + tiesults[Math.floor(Math.random()*tiesults.length)];
   matches += 1;
   playerScore += 0.5;
   computerScore += 0.5;
