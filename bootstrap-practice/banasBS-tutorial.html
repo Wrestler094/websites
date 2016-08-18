@@ -1,19 +1,27 @@
 <!-- banas-tutorial.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Derek Banas's Bootstrap Tutorial</title>
+	<!-- Colin's meta tags -->
 	<meta charset="UTF-8">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
+	<meta name="description" content="Bootstrap tutorial">
+	<meta name="keywords" content="Derek Banas, Bootstrap, Colin McNamara">
 	<meta name="author" content="Colin McNamara">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- GoogleFonts -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+				<!-- font-family: 'Pacifico', cursive; -->
+
   <!-- This is Bootstrap -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- This is my stylesheet -->
   <link rel="stylesheet" href="css/banasBS-tutorial.css">
 	<!-- This is my font-awesome script for cool icons -->
   <script src="https://use.fontawesome.com/72f616730d.js"></script>
+  <!-- This is jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
 </head>
 
@@ -22,10 +30,20 @@
 		<div class="page-header">
 			<h1>Bootstrap Tutorial</h1>
 		</div>
+		<h3 id="links">Links</h3>
+		<p>Navigation to come soon, for now, here are some links:</p>
+		<ul>
+			<li><a href=""></a></li>
+			<li><a href="#collapsible-nav">Collapsible Navigation Bar</a></li>
+			<li><a href="#pagination">Pagination</a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
 
 		<div class="jumbotron">
 			<p>This is the first line inside the JUMBOTRON! Whoo!</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At beatae omnis quidem, totam aperiam! Nemo amet voluptas laudantium, praesentium autem ut cupiditate unde molestias? Praesentium voluptates voluptatibus necessitatibus reprehenderit numquam!</p> 
+			<h1>Buttons</h1>
 
 			<p>Let's talk buttons:<br>
 				<a href="#" class="btn btn-default btn-lg" role="button">btn btn-default btn-lg</a><br>
@@ -42,6 +60,7 @@
 					<button type="button" class="btn btn-default">Medium</button>
 					<button type="button" class="btn btn-default">Large</button>
 				</div>
+				<br>
 				<br>
 				<strong>Button Notes:</strong><br>
 				<ul>
@@ -77,22 +96,637 @@
 	</div>
 
 	<div class="container">
+  	<div class="row">
+  		<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+ 
+	      <!-- We can collapse or hide data on the screen -->
+	      <h4><a href="#col1Content" data-toggle="collapse">Column 1</a></h4>
+ 
+	      <!-- With collapse in this div shows on load -->
+	      <div id="col1Content" class="collapse in"><strong>This div is part of class "collapse in" so that it shows as the default.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, quaerat, magnam. Amet hic vero magni tempora cumque, doloribus tempore natus aliquid, perferendis voluptatem iure! Earum vitae nulla provident aut mollitia.</div>
+			</div>
+	    <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+	      <h4><a href="#col2Content" data-toggle="collapse">Column 2</a></h4>
+	 
+	      <!-- With class collapse this div won't show on load -->
+	      <div id="col2Content" class="collapse">Quisque rutrum augue odio, eu placerat diam bibendum id. Donec at fringilla leo, non varius magna. Vestibulum finibus, lacus at gravida condimentum, tellus mauris imperdiet orci, a pretium justo nulla sit amet nunc. Class aptent taciti sociosqu ad litora torquent per conubia.</div>
+	    </div>
+    	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	      <h4><a href="#col3Content" data-toggle="collapse">Column 3</a></h4>
+	      <div id="col3Content" class="collapse">Pellentesque vulputate faucibus leo, non blandit ante faucibus maximus. Nunc non neque laoreet, tincidunt nisl et, tristique odio. Nullam imperdiet sollicitudin neque malesuada ornare. Curabitur ultrices urna id gravida lacinia. Nunc eu neque vitae nisi luctus rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac.</div>
+    	</div>
+	  </div> <!-- End of row div -->
+	</div><br> <!-- End of container div for collapsible columns -->
+	
+
+	<div class="container">
 		<div class="row">
-			<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
-				<h4><a href="#col1Content" data-toggle="collapse">Column1</a></h4>
-				<div class="collapse in" id="col1Content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, enim. Consequatur facere necessitatibus fugiat non voluptatem, ea ducimus maxime! Dolor alias reprehenderit natus cupiditate, autem voluptatibus. Commodi voluptatum, dicta qui.</div>
+			<div class="well hidden-sm hidden-md hidden-lg">
+				<p>Screen &lt; 768px</p>
+			</div>
+			<div class="well hidden-md hidden-lg">
+				<p>Screen &gt;= 768px and &lt; 992px</p>
+			</div>
+			<div class="well hidden-lg">
+				<p>Screen &gt;= 992px and &lt; 1200px</p>
+			</div>
+			<div class="well">
+				<p>Screen &gt; 1200px</p>
 			</div>
 		</div>
 	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-6">
+ 
+		    <!-- The table class adds nice spacing and the other classes add additional style -->
+		    <table class="table table-bordered table-striped table-hover">
+			    <thead>
+				    <tr>
+				    <td colspan="4">Best Baseball Players</td>
+				    </tr>
+			    </thead>
+			    <tbody>
+				    <tr>
+				 
+					    <!-- You can adjust the width of table columns as well -->
+					    <th class="col-md-2"></th>
+					 
+					    <!-- Use text alignment like text-center or text-right -->
+					    <th class="text-center">Average</th>
+					    <th class="text-center">RBIs</th>
+					    <th class="text-center">Homeruns</th>
+				    </tr>
+				    <tr>
+					    <td><a href="#">Hank Aaron*</a></td>
+					    <td>.305</td>
+					    <td>2297</td>
+					    <td>755</td>
+				    </tr>
+				    <tr>
+					    <td><a href="#">Babe Ruth*</a></td>
+					    <td>.342</td>
+					    <td>2214</td>
+					    <td>714</td>
+				    </tr>
+				    <tr>
+					    <td><a href="#">Barry Bonds</a></td>
+					    <td>.298</td>
+					    <td>1996</td>
+					    <td>762</td>
+				    </tr>
+			    </tbody>
+		    </table>
+  		</div>
+		</div> <!-- End of Row -->
+	</div> <!-- End of Table Container Div -->
+	<br>
+	<div class="container">
+		<p><strong>Table notes:</strong></p>
+		<ul>
+			<li>all table classes are in the actual table element, not the div.</li>
+			<li>The table above is in a container with .col-md-6 AND .col-md-offset-6 which pushes the table over 6 columns.</li>
+				<ul>
+					<li>At md or bigger, the table is 6 columns over.  At the sm and xs sizes, it takes up the entire 12 columns.</li>
+				</ul>
+			<li>class "table-bordered" puts the border around the table.</li>
+			<li>class "table-striped" gives it that white and grey alternating look</li>
+			<li>class "table-hover" highlights the row when hovering over an item in the table</li>
+			<li>For the "Best Baseball Players" header, use 'colspan="4"' to indicate 4 columns</li>
+			<li>We can give items the class "text-center" to center the text</li>
+		</ul>
+		<p>Around 22:00, Derek downloads the Bootstrap source and customizes the CSS.  Instead of doing that, I created a separate stylesheet and will be changing the styling using that.</p>
+	</div>
 	
+	<div class="container">
+		<hr>
+	</div>
 	
+	<div class="container">
+		<div class="jumbotron">
+			<h1>H1 Jumbotron</h1>
+			<h2>H2 Jumbotron</h2>
+			<h3>H3 Jumbotron</h3>
+			<h4>H4 Jumbotron</h4>
+		</div>
+	</div>
+
+	<br>
+	<div class="container">
+		<h1>The Carousel</h1>
+
+		<!-- Carousel -->
+		<!-- Surround everything with a div with the class carousel slide -->
+		<div id="theCarousel" class="carousel slide" data-ride="carousel">
+		 
+		  <!-- Define how many slides to put in the carousel -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+		    <li data-target="#theCarousel" data-slide-to="1"> </li>
+		    <li data-target ="#theCarousel" data-slide-to="2"> </li>
+		  </ol >
+		 
+		  <!-- Define the text to place over the image -->
+		  <div class="carousel-inner">
+		    <div class="item active" >
+			    <div class ="slide1"></div>
+			    <div class="carousel-caption">
+			      <h1>Amazing Backgrounds</h1>
+			      <p>Thousands of Backgrounds for Free</p>
+			      <p><a href="#" class="btn btn-primary btn-sm">Get them Now</a></p>
+			    </div>
+		  	</div>
+
+			  <div class="item">
+				  <div class="slide2"></div>
+				  <div class="carousel-caption">
+				    <h1>Thousands of Colors</h1>
+				    <p>Every Color you can Imagine</p>
+				  </div>
+			  </div>
+
+			  <div class="item">
+				  <div class="slide3"></div>
+				  <div class="carousel-caption">
+				  <h1>Amazing Illustrations</h1>
+				  <p>And they are All Free</p>
+				  </div>
+			  </div>
+		  </div> <!-- End of Carousel Inner -->
+		 
+		  <!-- Set the actions to take when the arrows are clicked -->
+		  <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+		  <span class="glyphicon glyphicon-chevron-left"> </span>
+		  </a>
+		  <a class="right carousel-control" href="#theCarousel" data-slide="next">
+		  <span class="glyphicon glyphicon-chevron-right"></span>
+		  </a>
+
+		</div>
+		<div>
+			<h4>Carousel Notes</h4>
+			<ul>
+				<li>Here is the div and element breakdown for the carousel:</li>
+				<ul>
+					<li>Div with id (specific to carousel), classes ('carousel', 'slide'), and data-ride ('carousel'); I don't know what data-ride is.</li>
+					<ul>
+						<li>Ordered List which is the number of slides in your carousel.  They each have special properties like 'data-target' which is equal to the id of your carousel div above AND 'data-slide-to' equal to the slide number.  Slide 0 is the first slide.  You can also add the "active" class to slide 0.</li>
+						<li>Div with class="carousel-inner"</li>
+						<ul>
+							<li>Div with class="item"</li>
+							<ul>
+								<li>The image.  In the above example, it is a Div class="slide#" => slide1, slide2, etc. are class names given by Derek.</li>
+								<li>Div class="carousel-caption"</li>
+							</ul>
+						</ul>
+						<li>Links (&lt;a&gt;) with class="carousel-control" and either left or right classes.</li>
+					</ul>
+				</ul>
+				<li>In the above example, slide1, slide2 and slide3 classes are used by Derek, they aren't Bootstrap classes.  They contain the background images for my carousel.</li>
+			</ul>
+		</div>
+	</div> <!--  End of general container div (to add some padding) -->
+	
+	<div class="container">
+		<h1>Glyphicons</h1>
+		<div class="jumbotron">
+			<p>
+				Normal glyphicon: <span class="glyphicon glyphicon-film"></span><br>
+				Link element button with glyphicon: <a href="#" class="btn btn-primary">Trash <span class="glyphicon glyphicon-trash"></span></a><br>
+				Button element button with glyphicon: <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Call Me</button>
+			</p>
+		</div>
+	</div>
+	
+	<div class="container">
+		<h1>Wells</h1>
+		<div class="well well-sm">
+			<h3>In a "well"</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum enim, quod porro tenetur modi quis non ratione iusto saepe, minus praesentium, ut sunt? Consequuntur sint, blanditiis natus commodi quo dicta?</p>
+			
+		</div>
+		<h3>NOT in a "well"</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, obcaecati, inventore. Asperiores ad a hic, maiores, cumque neque quos consequatur numquam adipisci pariatur necessitatibus. Voluptatibus perspiciatis nesciunt tempora cumque atque.</p>
+	</div>
+
+	<div class="container">
+		<img src="../../img/leo-messi1.jpg" id="leomessi" class="img-responsive img-thumbnail pull-left">
+		<h4>Notes</h4>
+		<ul>
+			<li>img-responsive makes it no bigger than the width of the page</li>
+			<li>img-circle gives it the circular or oval look</li>
+			<li>img-rounded gives it the rounded borders</li>
+			<li>you can have it sit left or right depending on "pull-left" or "pull-right"</li>
+			<li>Q - How do I make pictures smaller if they are huge?</li>
+		</ul>
+	</div>
+
+	<div class="container">	 
+		<!-- CONTEXTUAL COLORS -->
+		<!-- Contextual colors can be added to text -->
+		<p>
+			<span class="text-muted">Quis nostrud</span>
+			<span class="text-primary">exercitation ullamco</span>
+			<span class="text-success">laboris nisi</span>
+			<span class="text-info">ut aliquip</span>
+			<span class="text-warning">ex ea commodo</span>
+			<span class="text-danger">consequat.</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+		</p>
+		 
+		<!-- You can set contextual backgrounds -->
+		<p class="bg-primary">Duis aute irure dolor</p>
+		<p class="bg-success">In reprehenderit</p>
+		<p class="bg-info">In voluptate velit</p>
+		<p class="bg-warning">Esse cillum dolore eu</p>
+		<p class="bg-danger">Fugiat nulla pariatur</p>
+	</div>
+
+	<div class="container">
+		<h1>Dropdown Menu</h1>
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" ar-a-haspopup="true" aria-expanded="true">Favorite Hero
+			<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<!-- Unselectable header -->
+		    <li class="dropdown-header">Marvel</li>
+		    <li><a href="#">Spiderman</a></li>
+		    <li><a href="#">Captain America</a></li>
+		    <li><a href="#">Iron Man</a></li>
+		 
+		    <!-- Seperates content in menu -->
+		    <li role="separator" class="divider"></li>
+		    <li class="dropdown-header">DC</li>
+		 
+		    <!-- Disable menu element -->
+		    <li class="disabled"><a href="#">Superman</a></li>
+		    <li><a href="#">Batman</a></li>
+		    <li><a href="#">Flash</a></li>
+	    </ul>
+		</div>
+	</div><br>
+
+	<div class="container">
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon">Your Name</span>
+			<input type="text" class="form-control" placeholder="Full Name">
+		</div><br>
+		<div class="input-group input-group-sm">
+			<input type="text" class="form-control" placeholder="Full Name">
+			<span class="input-group-btn">
+				<button class="btn btn-default">Enter</button>
+			</span>
+			
+		</div><br>
+	</div>
+
+	<!-- Create input button dropdowns. aria-haspopup states that input has a sub menu. aria-expanded closes the dropdown by default -->
+	<div class="container">
+		<div class="row">
+	    <div class="input-group">
+	      <div class="input-group-btn">
+	        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User ID <span class="caret"></span></button>
+	        <ul class="dropdown-menu">
+	          <li><a href="#">Facebook</a></li>
+	          <li><a href="#">Twitter</a></li>
+	          <li><a href="#">Google+</a></li>
+	        </ul>
+	      </div>
+	      <input type="text" class="form-control" aria-label="...">
+	    </div>
+		</div>
+	</div>
+	<br>
+
+	<div class="container">
+		<h1>Menu Bars</h1>
+		<h4>Horizontal Menus with Dropdown</h4>
+		<ul class="list-inline">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Phone</a></li>
+					<li><a href="#">Email</a></li>
+					<li><a href="#">Schedule an Appointment</a></li>
+				</ul>
+			</li>
+		</ul>
+		<br>
+
+		<h4>Vertically Stacked Menus with Dropdown</h4>
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="#">Home (has class="active")</a></li>
+			<li class=""><a href="#">About</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Phone</a></li>
+					<li><a href="#">Email</a></li>
+					<li><a href="#">Schedule Appointment</a></li>
+				</ul>
+			</li>
+		</ul>
+
+	</div> <!-- End of Menu Bar Div -->
 
 
+	<div class="container">
+		<h1>Tabbed and Pill Interfaces</h1>
+		<!-- Use nav-pills, nav-tabs. To center tabs add nav-justified to the class for ul -->
+		<ul class="nav nav-pills">
+		  <li class="active"><a data-toggle="tab" href="#superman">Superman</a></li>
+		  <li><a data-toggle="tab" href="#batman">Batman</a></li>
+		 
+		  <!-- Dropdown menu item -->
+		  <li class="dropdown">
+		    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Flash
+		    <span class="caret"></span></a>
+		    <ul class="dropdown-menu">
+		 
+		      <!-- Disable a tab -->
+		      <li class="disabled"><a data-toggle="tab" href="#flash">The Flash</a></li>
+		      <li><a data-toggle="tab" href="#kidflash">Kid Flash</a></li>
+		    </ul>
+		  </li>
+		</ul>
+
+		<div class="tab-content">
+		  <div id="superman" class="tab-pane fade in active">
+		    <p>Superman is a fictional superhero appearing in American comic books published by DC Comics. </p>
+		  </div>
+		  <div id="batman" class="tab-pane fade">
+		    <p>Batman is a fictional superhero appearing in American comic books published by DC Comics. </p>
+		  </div>
+		  <div id="flash" class="tab-pane fade">
+		    <p>The Flash is a fictional superhero appearing in American comic books published by DC Comics. </p>
+		  </div>
+		  <div id="kidflash" class="tab-pane fade">
+		    <p>Kid Flash is a fictional superhero appearing in American comic books published by DC Comics. </p>
+		  </div>
+		</div>
+	</div><br>
 
 
+	<!-- Collapsible Navigation Bar -->
+	<div class="container">
+		<h1 id="collapsible-nav">Collapsible Navigation Bar</h1>
+	<!-- .navbar-fixed-top, or .navbar-fixed-bottom can be added to keep the nav bar fixed on the screen -->
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		 
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		 
+		      <!-- Button that toggles the navbar on and off on small screens -->
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		 
+		      <!-- Hides information from screen readers -->
+		        <span class="sr-only"></span>
+		 
+		        <!-- Draws 3 bars in navbar button when in small mode -->
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		 
+		      <!-- You'll have to add padding in your image on the top and right of a few pixels (CSS Styling will break the navbar) -->
+		      <a class="pull-left" href="#"><img width="50px" class="img-circle" src="../../img/colin-ireland.png"></a>
+		    </div>
+		 
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+		        <li><a href="#">About</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Email</a></li>
+		            <li><a href="#">Phone</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Set Appointment</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+
+		      <!-- navbar-left will move the search to the left -->
+		      <form class="navbar-form navbar-right" role="search">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Search">
+		        </div>
+		        <button type="submit" class="btn btn-default">Submit</button>
+		      </form>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<h4>Collapsible Nav Notes:</h4>
+		<ul>
+			<li>The button, right under navbar-header, is what shows up when the screen width gets small.</li>
+			<li>I don't necessarily need to be able to do this from memory...he copied and pasted the biggest chunk of that.</li>
+			
+		</ul>
+	</div>
+	<br>
+	<!-- Pagination -->
+	<div class="container">
+		<h1 id="pagination">Pagination</h1>
+		<nav>
+		  <ul class="pagination">
+		    <li>
+		      <a href="#" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li>
+		      <a href="#" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+	</div><br>
+
+	<!-- Thumbnails -->
+	<div class="container">
+	<div class="row">
+	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+	    <div class="thumbnail">
+	      <img src="thumb1.png" alt="...">
+	      <div class="caption">
+	        <h3>Hamburger</h3>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+	      </div>
+	      </div>
+	  </div>
+	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+	    <div class="thumbnail">
+	      <img src="thumb2.png" alt="...">
+	      <div class="caption">
+	        <h3>Polenta</h3>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+	    <div class="thumbnail">
+	      <img src="thumb3.png" alt="...">
+	      <div class="caption">
+	        <h3>Meatball Sub</h3>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+	    <div class="thumbnail">
+	      <img src="thumb4.jpg" alt="...">
+	      <div class="caption">
+	        <h3>Eggplant</h3>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	</div>
+
+
+	<!-- Progress bar -->
+	<!-- Provide progress feedback to users by changing the value of style for the progress-bar (Doesn't work on IE9 or below) progress-bar-striped is optional -->
+	<div class="container">
+	<div class="progress">
+	  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+	    <span class="sr-only">40% Complete</span>
+	  </div>
+	</div>
+	</div>
+
+	<!-- Media object -->
+	<div class="container">
+		<div class="media">
+		 
+		  <!-- You can use media-top, media-middle, or media-bottom -->
+		  <div class="media-left media-top">
+		    <a href="#">
+		      <img class="media-object" src="thumb1.png" alt="...">
+		    </a>
+		  </div>
+		  <div class="media-body">
+		    <h4 class="media-heading">Awesome Veggie Burger</h4>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor...</p>
+		  </div>
+		</div>
+	 
+		<div class="media">
+		  <div class="media-left media-top">
+		    <a href="#">
+		      <img class="media-object" src="thumb2.png" alt="...">
+		    </a>
+		  </div>
+		  <div class="media-body">
+		    <h4 class="media-heading">Best Polenta Recipe</h4>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor...</p>
+		  </div>
+		</div>
+	</div> <!-- End of Media Container -->
+	
+	<!-- Media List -->
+ 
+<div class="container">
+  <h3>What did you Eat for Lunch?</h3>
+ 
+  <div class="media"> <!-- class media , to create media element-->
+      <a class="pull-left" href="#">
+        <img class="media-object" src="thumb1.png" alt="...">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">A Ate a Veggie Burger</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor...</p>
+      </div>
+  </div>
+ 
+  <div class="media"> <!-- class media , to create media element  -->
+      <a class="pull-left" href="#">
+        <img class="media-object" src="thumb4.jpg" alt="..."> <!-- media-object 2 -->
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Eggplant Parmesan</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor...</p>
+ 
+        <!-- Nested Media : Was placed before the closing media-body div element -->
+      <div class="media">
+          <a class="pull-left" href="#">
+        <img class="media-object" src="thumb3.png" alt="...">
+          </a>
+      <div class="media-body">
+            <h4 class="media-heading">My Veggie Meatball Sub was Awesome</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor...</p>
+       </div>
+     	</div>
+   		</div> <!-- media-body for Eggplant closes here -->
+		</div>
+	</div>
+
+	<!-- List Groups -->
+	<div class="container">
+		<ul class="list-group">
+		 
+		  <!-- Disable elements -->
+		  <li class="list-group-item disabled">Verizon Email</li>
+		  <li class="list-group-item">
+		 
+		  <!-- You can add badges -->
+		  <span class="badge">123</span>Gmail</li>
+		  <li class="list-group-item">Sent</li>
+		 
+		  <!-- You can style elements like warning, success, info, danger-->
+		  <li class="list-group-item list-group-item-warning">Junk</li>
+		</ul>
+		 
+		<!-- Add lists of links -->
+		<a href="#" class="list-group-item">Add Account</a>
+		 
+		<!-- Add any html elements in list -->
+		<a href="#" class="list-group-item">
+		  <h4 class="list-group-item-heading">Delete Account</h4>
+		  <p class="list-group-item-text">The account will be permanently deleted</p>
+		</a>
+		 
+		<!-- You can put buttons in the list -->
+		<button type="button" class="list-group-item">Check for Mail</button>
+	 
+	</div>
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<!-- This is Bootstrap's JS file -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!-- This is jQuery -->	
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 </body>
 </html>
+
