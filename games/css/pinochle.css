@@ -1,0 +1,27 @@
+/*pinochle.css*/
+.card {
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
+  border: 1px solid black;
+	height: 110px;
+	/*padding: 1px;*/
+	margin: 10px;
+	
+}
+
+.card-row {
+	/*border: 1px solid black;*/
+}
+
+#abc1, #abc2, #abc3 {
+	border: 1px solid;
+	height: 50px;
+	
+}
+
+.suit, .denomination {
+	height: 48%;
+	font-size: 3rem;
+	
+}
+

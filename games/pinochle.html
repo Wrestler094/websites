@@ -1,0 +1,240 @@
+<!-- pinochle.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pinochle</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/pinochle.css">
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>&spades; <font color="red">&diams;</font> Pinochle Hand Generator <font color="red">&hearts;</font> &clubs;</h1>
+		</div>
+	</div>
+	<div></div>
+	<div class="container">
+		<div class="col-xs-12">
+			<div class="btn btn-success" id="generate">Generate</div>
+		</div><br>
+		<h2>Player 1</h2>
+		<div class="container card-row">
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s1"></div>
+				<div class="denomination text-center" id="p1d1"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s2"></div>
+				<div class="denomination text-center" id="p1d2"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s3"></div>
+				<div class="denomination text-center" id="p1d3"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s4"></div>
+				<div class="denomination text-center" id="p1d4"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s5"></div>
+				<div class="denomination text-center" id="p1d5"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s6"></div>
+				<div class="denomination text-center" id="p1d6"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s7"></div>
+				<div class="denomination text-center" id="p1d7"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s8"></div>
+				<div class="denomination text-center" id="p1d8"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s9"></div>
+				<div class="denomination text-center" id="p1d9"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s10"></div>
+				<div class="denomination text-center" id="p1d10"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s11"></div>
+				<div class="denomination text-center" id="p1d11"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p1s12"></div>
+				<div class="denomination text-center" id="p1d12"></div>
+			</div>
+			
+		</div>
+
+		<h2>Player 2</h2>
+		<div class="container card-row">
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s1"></div>
+				<div class="denomination text-center" id="p2d1"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s2"></div>
+				<div class="denomination text-center" id="p2d2"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s3"></div>
+				<div class="denomination text-center" id="p2d3"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s4"></div>
+				<div class="denomination text-center" id="p2d4"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s5"></div>
+				<div class="denomination text-center" id="p2d5"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s6"></div>
+				<div class="denomination text-center" id="p2d6"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s7"></div>
+				<div class="denomination text-center" id="p2d7"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s8"></div>
+				<div class="denomination text-center" id="p2d8"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s9"></div>
+				<div class="denomination text-center" id="p2d9"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s10"></div>
+				<div class="denomination text-center" id="p2d10"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s11"></div>
+				<div class="denomination text-center" id="p2d11"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p2s12"></div>
+				<div class="denomination text-center" id="p2d12"></div>
+			</div>
+			
+		</div>
+
+		<h2>Player 3</h2>
+		<div class="container card-row">
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s1"></div>
+				<div class="denomination text-center" id="p3d1"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s2"></div>
+				<div class="denomination text-center" id="p3d2"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s3"></div>
+				<div class="denomination text-center" id="p3d3"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s4"></div>
+				<div class="denomination text-center" id="p3d4"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s5"></div>
+				<div class="denomination text-center" id="p3d5"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s6"></div>
+				<div class="denomination text-center" id="p3d6"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s7"></div>
+				<div class="denomination text-center" id="p3d7"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s8"></div>
+				<div class="denomination text-center" id="p3d8"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s9"></div>
+				<div class="denomination text-center" id="p3d9"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s10"></div>
+				<div class="denomination text-center" id="p3d10"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s11"></div>
+				<div class="denomination text-center" id="p3d11"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p3s12"></div>
+				<div class="denomination text-center" id="p3d12"></div>
+			</div>
+			
+		</div>
+
+		<h2>Player 4</h2>
+		<div class="container card-row">
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s1"></div>
+				<div class="denomination text-center" id="p4d1"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s2"></div>
+				<div class="denomination text-center" id="p4d2"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s3"></div>
+				<div class="denomination text-center" id="p4d3"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s4"></div>
+				<div class="denomination text-center" id="p4d4"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s5"></div>
+				<div class="denomination text-center" id="p4d5"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s6"></div>
+				<div class="denomination text-center" id="p4d6"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s7"></div>
+				<div class="denomination text-center" id="p4d7"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s8"></div>
+				<div class="denomination text-center" id="p4d8"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s9"></div>
+				<div class="denomination text-center" id="p4d9"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s10"></div>
+				<div class="denomination text-center" id="p4d10"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s11"></div>
+				<div class="denomination text-center" id="p4d11"></div>
+			</div>
+			<div class="col-xs-1 card">
+				<div class="suit text-center" id="p4s12"></div>
+				<div class="denomination text-center" id="p4d12"></div>
+			</div>
+			
+		</div>
+	</div>
+
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="js/pinochle.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+</body>
+</html>
