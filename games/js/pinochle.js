@@ -1,5 +1,10 @@
 // pinochle.js
 
+// Notes
+
+// 1. Make deck creation a function
+// 2. Do Clubs-Diamonds-Spades-Hearts sort
+
 $(document).ready(function(){
 	var deck = []
 	var denominations = ["9", "9", "J", "J", "Q", "Q", "K", "K", "10", "10", "A", "A"]
@@ -7,6 +12,11 @@ $(document).ready(function(){
 	var suit_num = 0;
 	var den_num = 0;
 	var entity = "";
+	var player1 = {}
+
+	
+
+	
 
 
 	// Shuffle function from here: 
@@ -52,30 +62,59 @@ $(document).ready(function(){
 	}
 
 
-	for (var x = 0; x < 48; x++) {
-		deck[x] = {}
+
+	// Deck Creation
+	var deckCreation = function() {
+		for (var x = 0; x < 48; x++) {
+			deck[x] = {}
+			
+			if (x >= 12) {
+				den_num = x - Math.floor(x/12)*12
+			} else {
+				den_num = x
+			}
+
+			// 0 - 11: Clubs, 12 - 23: Diamonds, 24 - 35: Hearts, 36 - 47: Spades
+
+			if (x < 12) {
+				suit_num = 0
+			} else if (x < 24) {
+				suit_num = 1
+			} else if (x < 36) {
+				suit_num = 2
+			} else {
+				suit_num = 3
+			}
+
+
+			deck[x].suit = suits[suit_num]
+			deck[x].denomination = denominations[den_num]
 		
-		if (x >= 12) {
-			den_num = x - Math.floor(x/12)*12
-		} else {
-			den_num = x
 		}
-
-		if (x < 12) {
-			suit_num = 0
-		} else if (x < 24) {
-			suit_num = 1
-		} else if (x < 36) {
-			suit_num = 2
-		} else {
-			suit_num = 3
-		}
-
-
-		deck[x].suit = suits[suit_num]
-		deck[x].denomination = denominations[den_num]
-		
 	}
+
+	// var dealHands = function(){
+	// 	shuffle(deck);
+		
+	// 	for (var i = 0; i < 49; i++){
+	// 		if (i < 12) {
+	// 			switch (deck[i].suit){
+	// 				case "Clubs":
+	// 					player1.insert(0,deck[i])
+	// 					console.log(player1)
+	// 					break;
+	// 				default:
+	// 					player1[0]
+	// 			}
+
+				
+	// 		}
+
+	// 	}
+	// }
+	
+	deckCreation();
+	// dealHands();
 	
 	$("#abc1").click(function(){
 		shuffle(deck)
@@ -85,7 +124,7 @@ $(document).ready(function(){
 	$("#generate").click(function(){
 		console.log("Hello")
 		shuffle(deck)
-		// $("#test").addClass("clubs");
+		
 
 		
 		for (var i = 1; i < 49; i++){
@@ -97,6 +136,11 @@ $(document).ready(function(){
 				// $(suit_id).text(deck[c].suit)
 				$(suit_id).html(html_suit(deck[c].suit))
 				$(denom_id).text(deck[c].denomination)
+				$(suit_id).css("color", "black")
+				if (deck[c].suit == "Hearts" || deck[c].suit == "Diamonds") {
+					$(suit_id).css("color", "red")
+				}
+
 			} else if (i < 25) {
 				var a = i - 12
 				var suit_id = "#p2s" + a
@@ -104,6 +148,10 @@ $(document).ready(function(){
 				var c = i-1
 				$(suit_id).html(html_suit(deck[c].suit))
 				$(denom_id).text(deck[c].denomination)
+				$(suit_id).css("color", "black")
+				if (deck[c].suit == "Hearts" || deck[c].suit == "Diamonds") {
+					$(suit_id).css("color", "red")
+				}
 			} else if (i < 37) {
 				var a = i - 24
 				var suit_id = "#p3s" + a
@@ -111,6 +159,10 @@ $(document).ready(function(){
 				var c = i-1
 				$(suit_id).html(html_suit(deck[c].suit))
 				$(denom_id).text(deck[c].denomination)
+				$(suit_id).css("color", "black")
+				if (deck[c].suit == "Hearts" || deck[c].suit == "Diamonds") {
+					$(suit_id).css("color", "red")
+				}
 			} else {
 				var a = i - 36
 				var suit_id = "#p4s" + a
@@ -118,6 +170,10 @@ $(document).ready(function(){
 				var c = i-1
 				$(suit_id).html(html_suit(deck[c].suit))
 				$(denom_id).text(deck[c].denomination)
+				$(suit_id).css("color", "black")
+				if (deck[c].suit == "Hearts" || deck[c].suit == "Diamonds") {
+					$(suit_id).css("color", "red")
+				}
 			}
 			
 		}
