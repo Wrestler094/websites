@@ -133,7 +133,8 @@ $(document).ready(function(){
 		deal("#p7c2",13)
 		deal("#p8c1",14)
 		deal("#p8c2",15)
-		
+		$("#flop").removeClass("disabled");
+
 
 	}); 
 
@@ -143,11 +144,14 @@ $(document).ready(function(){
 		deal("#tablec1",16);
 		deal("#tablec2",17);
 		deal("#tablec3",18);
+		$("#turn").removeClass("disabled");
+
 	});
 	// END OF FLOP
 
 	$("#turn").click(function(){
 		deal("#tablec4",19);
+		$("#river").removeClass("disabled");
 	});
 	// END OF TURN
 
