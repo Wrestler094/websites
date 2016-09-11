@@ -1,2 +1,1 @@
-# Websites
-## by Colin McNamara
+# websites
