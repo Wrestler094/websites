@@ -6,6 +6,8 @@
 	font-size: 2em;
 	height: 9vw;
 	width: 8vw;
+	/* I added vertical-align: top because the cards kept shifting as you added content.  This fixes that.*/
+	vertical-align: top;
 }
 
 #table {
@@ -16,15 +18,30 @@
 }
 
 .btn {
-	margin: 2px;
+	margin: 0px;
 }
 
 /* Mobile Phones */
 @media screen and (max-width: 768px) {
 	.card {
-		height: 15vw;
-		width: 14vw;
+		height: 18vw;
+		width: 16vw;
 		font-size: 1.5em;
+	}
+
+	#generate {
+		height: 20vh;
+		font-size: 2.5rem;
+	}
+
+	#flop, #turn, #river {
+		height: 20vh;
+		font-size: 2.5rem;
+		
+	}
+
+	#table, .player-hand {
+		padding: 0px
 	}
 }
 

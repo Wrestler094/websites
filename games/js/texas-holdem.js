@@ -94,7 +94,19 @@ $(document).ready(function(){
 	
 	// ******* END OF DECK CREATION *********
 
+
+	// ******* START Clear All  *********
 	
+	var clear = function(id) {
+		$(id).html("");
+
+	}
+
+
+
+
+
+	// ******* END Clear All  *********
 	
 	deckCreation();
 
@@ -113,7 +125,31 @@ $(document).ready(function(){
 	
 
 	$("#generate").click(function(){
-		console.log("Hello");
+		clear("#p1c1")
+		clear("#p1c2")
+		clear("#p2c1")
+		clear("#p2c2")
+		clear("#p3c1")
+		clear("#p3c2")
+		clear("#p4c1")
+		clear("#p4c2")
+		clear("#p5c1")
+		clear("#p5c2")
+		clear("#p6c1")
+		clear("#p6c2")
+		clear("#p7c1")
+		clear("#p7c2")
+		clear("#p8c1")
+		clear("#p8c2")
+		clear("#tablec1");
+		clear("#tablec2");
+		clear("#tablec3");
+		clear("#tablec4");
+		clear("#tablec5");
+		$("#flop").addClass("disabled");
+		$("#turn").addClass("disabled");
+		$("#river").addClass("disabled");
+		
 		shuffle(deck);
 		
 
@@ -145,6 +181,8 @@ $(document).ready(function(){
 		deal("#tablec2",17);
 		deal("#tablec3",18);
 		$("#turn").removeClass("disabled");
+		$("#flop").addClass("disabled");
+		
 
 	});
 	// END OF FLOP
@@ -152,11 +190,14 @@ $(document).ready(function(){
 	$("#turn").click(function(){
 		deal("#tablec4",19);
 		$("#river").removeClass("disabled");
+		$("#turn").addClass("disabled");
+		
 	});
 	// END OF TURN
 
 	$("#river").click(function(){
 		deal("#tablec5",20);
+		$("#river").addClass("disabled");
 	});
 	// END OF RIVER
 
