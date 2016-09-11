@@ -56,13 +56,13 @@
 	}
 
 	#generate {
-		height: 15vh;
+		height: 12vh;
 		font-size: 1.5rem;
 		margin-bottom: 1vw;
 	}
 
 	#flop, #turn, #river {
-		height: 15vh;
+		height: 12vh;
 		font-size: 2.0rem;
 		
 	}
