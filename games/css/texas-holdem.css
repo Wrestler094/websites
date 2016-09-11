@@ -1,8 +1,13 @@
 /*texas-holdem.css*/
 #header {
-		font-size: 5.5vw;
-		text-align: center;
+	font-size: 5.5vw;
+	text-align: center;
 	}
+#board-header {
+	font-size: 28px;
+	margin-top: 4px;
+	margin-bottom: 3px;
+}
 .card {
 	border: 1px solid;
 	border-radius: 8px;
@@ -33,6 +38,8 @@
 }
 .player {
 	font-size: 20px;
+	margin-top: 3px;
+	margin-bottom: 4px;
 }
 
 .btn {
@@ -43,8 +50,8 @@
 @media screen and (max-width: 768px) {
 	
 	.card {
-		height: 18vw;
-		width: 16vw;
+		height: 17vw;
+		width: 15vw;
 		font-size: 1.5em;
 	}
 
