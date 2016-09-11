@@ -1,0 +1,50 @@
+/*styles.css*/
+body {
+	font-size: 1.1em;
+	line-height: 1.25em;
+}
+
+ol {
+	/*font-size: 1.1em;*/
+	/*line-height: 1.25em;*/
+}
+
+ol > ol {
+	list-style-type: lower-alpha;
+}
+
+ol > ol > ol {
+	list-style-type: lower-roman;
+}
+
+.player {
+	border-radius: 0.25em;
+	margin-bottom: 0.5em;
+}
+
+#myCanvas {
+	border: 2px solid white;
+}
+
+#notes {
+	border: dashed blue 3px;
+	padding: 10px;
+	width: 90vw;
+}
+
+#player-list {
+	/*border: 1px solid black;*/
+	color: #FFF;
+	float: left;
+	margin-right: 20px;
+	/*padding: 1em;*/
+	
+}
+
+#soccer-box {
+	background-color: #3333ff;
+	border: 1px solid black;
+	display: inline-block;
+	padding: 1em;
+	
+}

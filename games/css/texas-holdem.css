@@ -1,0 +1,36 @@
+/*texas-holdem.css*/
+.card {
+	border: 1px solid;
+	border-radius: 8px;
+	display: inline-block;
+	font-size: 2em;
+	height: 9vw;
+	width: 8vw;
+}
+
+#table {
+	text-align: center;
+}
+.player-hand {
+	text-align: center;
+}
+
+.btn {
+	margin: 2px;
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 768px) {
+	.card {
+		height: 15vw;
+		width: 14vw;
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 968px){
+	.card {
+		height: 12vw;
+		width: 10vw;
+	}
+}

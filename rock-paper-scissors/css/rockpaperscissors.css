@@ -1,0 +1,256 @@
+/*rockpaperscissors.css*/
+h1 {
+	text-align: center;
+	font-size: 70px;
+}
+
+#setup{
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Slabo 27px', serif;
+	margin-bottom: 5px;
+}
+
+
+
+/******** START Names: The div that holds the player names and the player names themselves */
+
+#player-names {
+	display: block;
+	/*border: 1px black solid;*/
+}
+
+#player, #computer {
+	border: 1px black solid;
+	border-radius: 4px;
+	display: inline-block;
+	font-size: 6vw;
+	
+}
+
+/******* END Names *******/
+
+/******** START - Both the Player/Comp names and Score ********/
+#player, #computer, #player-score, #computer-score {
+	margin-left: 13vw;
+	text-align: center;
+	width: 30vw;
+	border: 1px black solid;
+	border-radius: 4px;
+}
+
+/******** END - Both the Player/Comp names and Score ********/
+
+/******* START Scores: The scores-containing div and each of the player and computer scores */
+
+#scores {
+	display: block;
+	/*border: 1px black solid;*/
+}
+
+#player-score, #computer-score {
+
+	display: inline-block;
+	font-size: 5em;
+	background-color: #004d00;
+	color: #EAEEF2;
+}
+
+/******* END Scores */
+
+
+/******* START Matches: The small div that holds that number of matches played thus far. */
+#matches-display {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+#matches-num {
+	display: inline-block;
+}
+
+/******* END Matches */
+
+
+/********* START Selection: this holds what the player can choose **********/
+
+#selection {
+	/*display: inline-block;*/
+	/*border: blue 4px solid;*/
+	font-size: 100px;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	text-align: center;
+	
+	/*width: 60vw;*/
+}
+
+#selection > .fa:hover {
+	color: blue;
+	background-color: black;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/********* END Selection ***********/
+
+/******* START rps-explanation - This is the insult or written result of the game */
+ 
+#rps-explanation {
+	display: inline-block;
+	font-family: 'Slabo 27px', serif;
+	font-size: 6vw;
+	height: 10vh;
+	/*border: black 1px solid;*/
+	margin: 30px 8vw;
+	text-align: center;
+	width: 80vw;
+}
+
+/* END rps-explanation */
+
+
+
+/*********** START Animated fists **********/
+
+
+#player-fist, #computer-fist {
+	font-size: 100px;
+	position: relative;
+}
+
+
+#player-fist {
+	/* Rotation of Fist (Left Fist) */
+	-webkit-transform: rotate(90deg);
+	/* Firefox */
+	-moz-transform: rotate(90deg);
+	/* IE */
+	-ms-transform: rotate(90deg);
+	/* Opera */
+	-o-transform: rotate(90deg);
+	    
+}
+
+#computer-fist {
+  transform: rotate(-90deg) scaleX(-1, 1);
+	-moz-transform: rotate(-90deg) scale(-1, 1);
+  -o-transform: rotate(-90deg) scale(-1, 1);
+	-webkit-transform: rotate(-90deg) scale(-1, 1);    
+  -ms-transform: rotate(-90deg) scale(-1, 1);
+}
+
+.fist-box {
+	/*border: 1px solid;*/
+	display: inline-block;
+	width: 30vw;
+	/*height: 15vh;*/
+	margin-left: 13vw;
+	text-align: center;
+}
+
+/******** END Animated fists *********/
+
+/* Smaller Screen */
+@media screen and (max-width:1100px) {
+	
+	#player, #computer, #player-score, #computer-score {
+		margin-left: 8vw;
+		text-align: center;
+		width: 35vw;
+		border: 1px black solid;
+		border-radius: 4px;
+	}
+
+
+	#selection {
+		/*display: inline-block;*/
+		/*border: blue 4px solid;*/
+		font-size: 100px;
+		margin: 0 auto;
+		margin-bottom: 0px;
+		text-align: center;
+
+	}
+
+	#selection > .fa:hover {
+		color: blue;
+		background-color: black;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+}
+
+@media screen and (max-width:970px) {
+	
+	#player, #computer, #player-score, #computer-score {
+		margin-left: 4vw;
+		text-align: center;
+		width: 40vw;
+		border: 1px black solid;
+		border-radius: 4px;
+	}
+
+
+	#selection {
+		/*display: inline-block;*/
+		/*border: blue 4px solid;*/
+		font-size: 25px;
+		margin: 0 auto;
+		margin-bottom: 50px;
+		text-align: center;
+
+	}
+
+	#selection > .fa:hover {
+		color: blue;
+		background-color: black;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+}
+
+@media screen and (max-width:768px) {
+	h1 {
+		font-size: 15vw;
+	}
+
+	#player, #computer, #player-score, #computer-score {
+		border: 1px black solid;
+		border-radius: 4px;
+		
+		margin-left: 4vw;
+		text-align: center;
+		width: 40vw;
+	}
+
+	#player, #computer {
+		font-size: 19vw;
+	}
+	#player-score, #computer-score {
+		font-size: 9vw;
+	}	
+	
+	#matches-display {
+		font-size: 5vw;
+	}
+
+	#selection {
+		/*display: inline-block;*/
+		/*border: blue 4px solid;*/
+		font-size: 17vw;
+		margin: 0 auto;
+		margin-bottom: 50px;
+		text-align: center;
+
+	}
+
+	#selection > .fa:hover {
+		color: blue;
+		background-color: black;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+}

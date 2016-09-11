@@ -1,0 +1,147 @@
+/*colinsjs_styles.css*/
+* {
+	box-sizing: border-box:
+}
+body {
+	margin: 0em;
+	padding: 0.5em;
+	
+}
+
+h1 {
+	font-size: 5vw;
+	text-align: center;
+	display: inline-block;
+	margin-left: 23vw;
+	margin-right: auto;
+	/*width: 35vw;*/
+}
+
+#rps-div {
+	margin-left: 3vw;
+	width: 92vw;
+	background-color: #ddd;
+	border: 1px solid black;
+}
+#rps-h {
+	text-align: center;
+}
+#player-name {
+	/*border: 1px solid black;*/
+	display: inline-block;
+	font-size: 32px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 24%;
+}
+
+#battleground-name{
+	/*border: 1px solid black;*/
+	display: inline-block;
+	font-size: 32px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 50%;
+}
+#player-score {
+	/*border: 1px solid black;*/
+	display: inline-block;
+	font-size: 64px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 24%;
+}
+#computer-score {
+	/*border: 1px solid black;*/
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 24%;
+	font-size: 64px;
+}
+#battleground {
+	/*border: 1px solid black;*/
+	display: inline-block;
+	width: 49%;
+	line-height: 70px;
+	vertical-align: top;
+	/*padding: 1em;*/
+	margin: 0;
+	/*background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #3e2), color-stop(0.12, #222), color-stop(0.18, #3e2), color-stop(0.32, #222), color-stop(0.42, #3e2), color-stop(0.5, #222), color-stop(0.65, #3e2), color-stop(0.71, #222), color-stop(0.85, #3e2), color-stop(0.92, #222), color-stop(1, #3e2));*/
+  /*background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );*/
+  /*background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );*/
+}
+.announce {
+	font-size: 1.5em;
+}
+#stats {
+	text-align: center;
+}
+#selection {
+	display: inline-block;
+	margin-right: 20%;
+	text-align: right;
+}
+
+#colins-div {
+	border: dashed 2px;
+	border-color: #000;
+	height: 25vh;
+	margin: 0.25em;
+	padding: 0.25em;
+	width: 25vw;
+	
+}
+#rps-result-under {
+	font-size: 1.5em;
+	color: #33F;
+	text-align: center;
+}
+
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.fa {
+	cursor: pointer;
+	padding: 4px;
+}
+.fa:hover {
+	color: blue;
+	background-color: black;
+	border-radius: 5px;
+}
+#rps-user {
+	text-align: left;
+}
+#matches-num, #ties-num {
+	font-size: 1.5em;
+}
+#play-again {
+	border-radius: 4px;
+	padding: 4px;
+	font-size: 2em;
+	color: white;
+	background-color: #005;
+}
+.fruit {
+	display: inline-block;
+	border: black 1px solid;
+	width: 150px;
+	height: 75px;
+	border-radius: 5px;
+	vertical-align: middle;
+}
+#display {
+	width: 300px;
+	height: 150px;
+	border: black 1px solid;
+}

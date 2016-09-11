@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box; }
+
+body {
+	/*line-height: 1.5em;*/
+  /*padding: 0.5em;*/
+}
+
+button {
+  border-radius: 8px;
+}
+
+.page-header {
+  /*background-color: #f4511e; /* Orange */
+  /*background-color: #444c54; /* Faded Navy */
+  /*background-color: #c35a57;*/ /* Punch (red) */
+  /*background-color: #78a5a3;*/ /* Ocean Breeze */
+  /*background-color: #e1b16a;*/ /* Warm (orange) */
+  background-image: url(../img/space-bkgrd1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  height: 50vh;
+  color: white;
+  text-align: center;
+  /*font-family: 'Space Mono', monospace;*/
+  font-family: 'Playfair Display SC', serif;
+}
+
+
+.featured {
+  text-align: center;
+}
+
+.featured-img {
+  margin: 0 auto;
+  width: 60vw;
+  height: 40vw;
+}
+
+.course {
+  margin: 0 auto;
+  text-align: center;  
+}
+
+.course-img {
+  height: 30vw;
+  
+  margin: 0 auto;
+}
+
+
+
+
+
+/*********** Tablet *********/
+@media (min-width: 768px) {
+  .featured-img {
+    width: 30vw;
+    height: 18vw;
+    margin: 0 auto;
+  }
+
+  .course-img {
+    height: 10vw;
+    
+    margin: 0 auto;
+  }
+
+  .course {
+  margin: 0 auto;
+  text-align: left;  
+}
+
+
+}
+
+
+

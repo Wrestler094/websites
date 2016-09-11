@@ -1,0 +1,164 @@
+<!-- canvas1.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colin's First Canvas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<h1>Welcome to Colin's Canvas</h1>
+	<div id="notes">
+		<p>Notes on Canvas:</p>
+		<ol>
+			<li>Canvas does not seem to work well with CSS.  It has only two properties (height, width) which should be explicitly styled in the html</li>
+			<li>The dimensions of a soccer field are: 100yds long x 60 yards wide</li>
+			<li>To draw a line, you are simply defining the points of the line based on the coordinates on your canvas:</li>
+			<ol>
+				<li>As a reminder, these lines start the script: (1) var c = document.getElementById("myCanvas"); (2) var ctx = c.getContext("2d");</li>
+				<li>ctx.moveTo(0,0); => set the starting point</li>
+				<li>ctx.lineTo(200,100); => set the end point</li>
+				<li>ctx.stroke(); => actually draw the line.  It will NOT get drawn without this.</li>
+			</ol>
+			<li>Drawing a circle is a little more involved, the steps are listed below:</li>
+			<ol>
+				<li>There are three main lines of code:</li>
+				<ol>
+					<li>ctx.beginPath(); => begins a path to draw the arc/circle</li>
+					<li>ctx.arc(135,225,45,0,2*Math.PI); => This will be explained further below but put simply: arc(x,y,r,startangle,endangle)</li>
+					<li>ctx.stroke(); => like the straight line, this actually draws the circle</li>
+				</ol>
+				<li>For the arc equation/function (whatever it is), the x and y coordinates are self explanatory.  The only difference vs. the line and a rectangle is that the (x,y) coordinates are the center point of the circle, not the corner.</li>
+				<li>The radius is also obvious and is in pixels</li>
+				<li>The startangle and endangle are more difficult because they are in radians. (Note: I should probably create a simple equation/function to convert to degrees).  One big thing to note is that 0 radians is at 3 o'clock.</li>
+				<li>To draw a full circle, you can simply start at 0 and go to 2*Math.PI.  Go to wikipedia for more (<a href="https://en.wikipedia.org/wiki/Radian">Radian</a>) but 2*pi radians is one circle, one-quarter pi radians is 90 degrees.</li>
+			</ol>
+			<li>Drawing a rectangle is the most intuitive</li>
+			<li>To standardize the soccer field, it needs to be relative to a pixel multiplier, not the length or width of the field.  For simplicity and generally, soccer field lengths/widths may change but the 18-yd and 6-yd boxes are always the same, along with the penalty spot and (for me) the center circle radius.</li>
+			<li>To standardize, I need to get the height and width of the canvas.  Every x-coordinate must be relative to width, y-coordinate relative to height and then I can use hard values for measurements that shouldn't change (i.e. 18yd, 6yd, penalty spot, etc.)</li>
+		</ol>
+	</div>
+
+	<br>
+
+	<div id="soccer-box">
+
+		<div id="player-list">
+			Starting Field Players:<br>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			Starting Goalie:<br>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			Bench:<br>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+			<span><input class="player" placeholder="(player name)"></input> <button>Add</button><br></span>
+
+		</div>
+
+		<canvas id="myCanvas" width="500" height="750">
+		Your browser does not support the HTML5 canvas tag.
+		</canvas>
+
+		<script>
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+
+		// Right now, this script only really works if the height to width ratio is 10:6 or 100yds:60yds, which are the standard dimensions
+		// If I make the width the longer or shorter, the 18 and 6yd boxes are off-center, but the circle is not.
+		// The length and width of the boxes should not change BUT the starting point for everything on this must be relative to the height
+		// 		or the width of the canvas
+
+		var height = document.getElementById("myCanvas").height;
+		var width = document.getElementById("myCanvas").width;
+		var half_height = height/2;
+		var half_width = width/2;
+		var multiplier = height/100;
+
+		ctx.fillStyle = "#33bb33";
+		ctx.fillRect(0,0,width,height);
+
+		// Set the color of each of the lines or shapes that I draw 
+		ctx.strokeStyle = "#fff";
+		
+		// Middle Line
+		ctx.moveTo(0,half_height);
+		ctx.lineTo(width,half_height);
+		ctx.stroke();
+
+		// Center Circle
+		ctx.beginPath();
+		ctx.arc(half_width,half_height,multiplier*10,0,2*Math.PI);
+		ctx.stroke();
+
+		// Corner Arcs: Top-Right, Bot-Right, Bot-Left, Top-Left
+		var cornerRadius = multiplier;
+		ctx.beginPath();
+		ctx.arc(width,0,cornerRadius,0.5*Math.PI,1.0*Math.PI);
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.arc(width,height,cornerRadius,1.0*Math.PI,1.5*Math.PI);
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.arc(0,height,cornerRadius,1.5*Math.PI,2.0*Math.PI);
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.arc(0,0,cornerRadius,0*Math.PI,0.5*Math.PI);
+		ctx.stroke();
+
+		// Top Goal Area: (18-yd, 6yd, Penalty spot, Arc)
+		ctx.strokeRect(2/15*width, 0, 44/60*width, multiplier*18); // 18-yd box
+		ctx.strokeRect(1/3*width, 0, 20/60*width, multiplier*6); //6-yd box
+		ctx.moveTo(29.5/60*width,multiplier*12); // penalty spot
+		ctx.lineTo(30.5/60*width,multiplier*12);
+		ctx.stroke();
+
+		ctx.beginPath(); // 18-yd box circle
+		ctx.arc(0.5*width,multiplier*18,multiplier*4,0*Math.PI,1*Math.PI);
+		ctx.stroke();
+
+		// Bottom Goal Area: (18-yd, 6yd, Penalty spot, Arc
+		ctx.strokeRect(2/15*width, multiplier*82, 44/60*width, multiplier*18); // 18-yd box
+		ctx.strokeRect(1/3*width, multiplier*94, 20/60*width, multiplier*6); //6-yd box
+		ctx.moveTo(29.5/60*width,multiplier*88); // penalty spot
+		ctx.lineTo(30.5/60*width,multiplier*88);
+		ctx.stroke();
+
+		ctx.beginPath(); // 18-yd box circle
+		ctx.arc(0.5*width,multiplier*82,multiplier*4,1.0*Math.PI,2.0*Math.PI);
+		ctx.stroke();
+
+		</script>
+		
+	</div>	
+	
+	<br>
+
+	<div>
+		Links to explore further:
+		<ol>
+			<li>Make a clock that "ticks" using canvas: <a href="http://www.w3schools.com/canvas/canvas_clock.asp">W3Schools Clock Page</a></li>
+			<li></li>
+		</ol>
+	</div>
+
+
+</body>
+</html>

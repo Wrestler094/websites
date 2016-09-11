@@ -1,0 +1,92 @@
+<!-- rockpaperscissors.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock, Paper, Scissors!</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Colin McNamara">
+	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" type="text/css" href="css/rockpaperscissors.css"></style> -->
+	<link rel="stylesheet" type="text/css" href="css/rockpaperscissors2.css"></style>
+  <script src="https://use.fontawesome.com/72f616730d.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  
+
+</head>
+<body>
+	<div class= “container-fluid”> 
+    <div class= “row”>
+      <div class= “col-xs-12”>
+				<h1 id="big-title">Rock, Paper, Scissors!!!</h1>
+			</div>
+		</div>
+	</div> <!-- End of H1 Container -->
+
+	<div>
+	<div class= “container-fluid”> 
+    <div class= “row” id="player-names">
+      <div class= “col-xs-4”>
+				<div id="player">Player</div>
+			</div>
+
+			<div class="col-xs-2">
+				
+			</div>
+
+			<div class="col-xs-4">
+				<div id="computer">Computer</div>
+			</div>
+		</div>
+	</div> <!-- End of Player Names Container -->
+
+			
+		</div>
+		<br>
+		<div id="scores">
+			<div id="player-score"></div>
+			<div id="computer-score"></div>
+		</div>
+		<br>
+
+		<div id="matches-display">Wins: <span id="wins-num">0</span> - Losses: <span id="losses-num">0</span> - Ties: <span id="ties-num">0</span> - Matches: <span id="matches-num">0</span></div>
+		<br>
+		<div id="setup">Make your selection:</div>	
+		<div id="selection">
+
+      <i id="rock" class="select fa fa-hand-rock-o"></i>
+      <i id="paper" class="select fa fa-hand-paper-o"></i>
+      <i id="scissors" class="select fa fa-hand-scissors-o"></i>
+    </div>
+
+
+		<!-- Animated fists -->
+
+		<div>
+			<div class="fist-box">
+				<i id="player-fist" class="animated-fist fa fa-hand-rock-o fa-4x"></i>
+			</div>
+			<div class="fist-box">
+				<i id="computer-fist" class="animated-fist fa fa-hand-rock-o fa-4x"></i>
+			</div>
+		</div>
+
+		<!-- This is what the player and computer ultimately pick -->
+	<!-- 	<div id="rps-display">
+			<div id="player-display"></div>
+			<div id="computer-display"></div>
+		</div> -->
+		
+		<br>
+		<div id="rps-explanation"></div>
+
+
+		
+	</div>
+
+  <script src="js/rockpaperscissors.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!-- colinsjs2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Javascript</title>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/colinsjs_styles.css" media="screen">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  
+  
+  <style>
+    body {
+      margin: 4%;
+      background-color: #fff;
+      }
+
+    h1 {
+      text-align: center;
+    }
+
+    img{
+      width:95%;
+    }
+
+    button {
+      -webkit-border-radius: 4px;
+              border-radius: 4px;
+      background-color: #fea;
+      margin: 4px;
+    }
+
+    #btn-container {
+      width: 500px;
+    }
+
+    #message {
+      line-height:100px;
+      text-align:center;
+      width: 575px;
+      height: 100px;
+      border:5px solid black;
+      margin:0 auto;
+      margin-bottom:10px;
+      background-color: #8e68ff;
+      font-size: 150%;
+    }
+
+    #image {
+      background-repeat: no-repeat;
+      border: black 2px solid;
+      height: 45vh;
+      margin: 0 auto;
+      text-align: center;
+      width: 45vh;
+      
+    }
+
+    .preview{
+      width:15%;
+      margin-left:13%;
+      border: 4px solid black;
+    }
+
+
+  </style>
+</head>
+<body>
+
+	<h1>Learning Javascript #2</h1>
+  <hr>
+  <h2>Interactivity with Javascript - Week 2 Example</h2>
+
+  <p>Dr. Lent's page shows three images.  When you hover over an image, its alt text will be displayed in that large box.<p>
+  <p>That large, bluish box is a div with the id of "message".  Her simple function called "showProperties" changes the contents of that box by specifically picking out that box with the id of "message".</p>
+  <p>The function is triggered using the "onmouseover" event.  It is done by simply doing: onmouseover = "showProperties(this)" where showProperties is the name of the function and 'this" is the argument passed in (which is the img object).</p>
+  <p>One important part to remember is that her function changes the contents of the "message" div in one direction.  To reverse the changes made to the div when a user moves their mouse off the image, she use the onmouseleave event to change the text to "Hover over an image".</p>
+
+  <script>
+
+    function showProperties(element){
+      document.getElementById('message').innerHTML = element.alt;
+    }
+
+  </script>
+
+  <div id = "message">Hover over an image to display the alt text.</div>
+
+  <img class = "preview" alt = "Taco Tuesday on Cinco de Mayo" src = "../images/taco_tuesday.jpg" onmouseover = "showProperties(this)" onmouseleave = "document.getElementById('message').innerHTML='Hover over an image';">
+  
+  <img class = "preview" alt = "Funny message from tequila" src = "../images/tequila_text.jpg" onmouseover = "showProperties(this)" onmouseleave =  "document.getElementById('message').innerHTML='Hover over an image';">
+  
+  <img class = "preview" alt = "Soccer Ball" src = "../images/soccerball.jpg" onmouseover = "showProperties(this)" onmouseleave =  "document.getElementById('message').innerHTML='Hover over an image';">
+
+  <hr>
+
+  <h2>Interactivity with Javascript - Week 2 Homework Practice</h2>
+  
+  <script>
+    function changeDiv() {
+      document.getElementById('image').style.backgroundColor = "black";
+      document.getElementById('image').style.color = "white";
+    }
+
+    function changeBack() {
+      document.getElementById('image').style.backgroundColor = "white";
+      document.getElementById('image').style.color = "blue";
+    }
+
+    function getPicture() {
+      document.getElementById('image').style.backgroundImage = "url(" + "../images/soccerball.jpg" + ")";
+      document.getElementById('image').innerHTML = "";
+    }
+  </script>
+  
+  <div id = "btn-container">
+    <button onclick="changeDiv()">Background Black, Text White</button><br>
+    <button onclick="changeBack()">Background White, Text Blue</button><br>
+    <button onclick="getPicture()">Show a picture</button><br>
+  </div>
+  <div id = "image">This is my div</div><br>
+  <h2>Javascript Next Level</h2>
+  <h5>All Javascript from here on down is in colinsjs.js</h5>
+
+
+
+	
+</body>
+</html>

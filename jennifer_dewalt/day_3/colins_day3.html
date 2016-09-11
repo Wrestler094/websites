@@ -1,0 +1,58 @@
+<!-- colins_day3.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colin's Day 3 Clone: Random Background Color</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/cmday3.css" media="screen">
+
+	<script type="text/javascript" src="js/cm_day3.js"></script>
+
+</head>
+<body id="cm_background">
+	<button onclick = "changeBackground()" >Click Here!</button>
+
+	<div id="notes">
+		<p>The following are my notes/observations about what Jen DeWalt did to complete her page:</p><br>
+		<ol>
+			<li>She does not actually use a button for the "click me" box.  She uses a div and then styles it.</li>
+			<li>The random color generator simply produces a hexadecimal color.  Her function is as follows: "Math.random().toString(16).slice(2,8)"</li>
+			<ol>
+				<li>Math.random() => produces a random number between 0 and 1</li>
+				<li>toString => converts the number into a string (as I am assuming the hexadecimal color can only be entered as a string).  Also, by placing 16 in the parentheses, it returns a hexidecimal representation of the number.</li>
+				<li>slice(x,y) => returns a part of the string starting at the character with index "x" and then stopping at and NOT including the "yth" character.</li>
+			</ol>
+			<li>The button itself has an href attribute assigned to "javascript:void(0);".  That script is the smallest script that evaluates to 'undefined' which prevents Javascript from loading a new page.  There are some good articles on that at <a href="http://stackoverflow.com/questions/1291942/what-does-javascriptvoid0-mean">Stack Overflow</a> and <a href="http://www.tizag.com/javascriptT/javascriptvoid.php">Tizag</a>.</li>
+			<li>It looks like she is using JQuery for the rest of her function in 'random_background.js'.  Here are my initial impressions which I will then try to validate later.  The following comments are based on her function shown here:</li>
+			<p>$("#button").on("click", function () { <br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp$('body').css('background', randomColor()); <br>
+	});</p><br>
+			<ol>
+				<li>"#button" is the id of her anchor tag that says "Click me!"</li>
+				<li>JQuery appears to do events similar to what I've learned but breaks it up a bit.  It looks like you select the thing it should watch the event for, specify the event (i.e. click), and then tell it what to do...in this case, it's do the function.</li>
+				<li>The function grabs the body and seeks to edit the css property "background" where it then puts in the randomColor() function which returns a hexadecimal value.</li>
+			</ol>
+			<li>As a reminder, "../" goes up one directory level.</li>
+
+		</ol>
+		<br>
+		<hr>
+		
+		<p>Things to think about:</p>
+		<ol>
+			<li>I need to learn JQuery and compare it to how I currently understand events in Javascript.</li>
+			<li>How else could I do the hexadecimal color generator?  I kind of just broke down her equation and then used hers...how would I intuitively do it and do I like my version vs. hers?</li>
+		</ol>
+
+	</div>
+
+	<br>
+	<br>
+
+	<footer>
+		<a href="../../index.html">Colin's GH-Pages Home</a>
+	</footer>
+
+</body>
+</html>
