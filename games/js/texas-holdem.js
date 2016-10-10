@@ -1,5 +1,13 @@
 // texas-holdem.js
 
+// I need to do a lot of stuff...this is what I think I need to do:
+/*
+	Create an array for each player
+	Figure out how to identify strength of each hand
+	Figure out the percentages
+	Add the ability to "disable" a hand and adjust the percentages
+*/
+
 $(document).ready(function(){
 	var deck = []
 	var denominations = ["2", "3", "4", "5", "6", "7", "8", "9","10", "J","Q","K", "A"]
@@ -7,7 +15,7 @@ $(document).ready(function(){
 	var suit_num = 0;
 	var den_num = 0;
 	var entity = "";
-	var player1 = {}
+	var player1 = [];
 
 	
 
@@ -151,24 +159,26 @@ $(document).ready(function(){
 		$("#river").addClass("disabled");
 		
 		shuffle(deck);
+		player1.push(deck[0]);
+		player1.push(deck[1]);
 		
 
-		deal("#p1c1",0)
-		deal("#p1c2",1)
-		deal("#p2c1",2)
-		deal("#p2c2",3)
-		deal("#p3c1",4)
-		deal("#p3c2",5)
-		deal("#p4c1",6)
-		deal("#p4c2",7)
-		deal("#p5c1",8)
-		deal("#p5c2",9)
-		deal("#p6c1",10)
-		deal("#p6c2",11)
-		deal("#p7c1",12)
-		deal("#p7c2",13)
-		deal("#p8c1",14)
-		deal("#p8c2",15)
+		deal("#p1c1",0);
+		deal("#p1c2",1);
+		deal("#p2c1",2);
+		deal("#p2c2",3);
+		deal("#p3c1",4);
+		deal("#p3c2",5);
+		deal("#p4c1",6);
+		deal("#p4c2",7);
+		deal("#p5c1",8);
+		deal("#p5c2",9);
+		deal("#p6c1",10);
+		deal("#p6c2",11);
+		deal("#p7c1",12);
+		deal("#p7c2",13);
+		deal("#p8c1",14);
+		deal("#p8c2",15);
 		$("#flop").removeClass("disabled");
 
 
@@ -200,6 +210,17 @@ $(document).ready(function(){
 		$("#river").addClass("disabled");
 	});
 	// END OF RIVER
+
+	
+
+
+
+
+
+
+
+
+
 
 });
 
